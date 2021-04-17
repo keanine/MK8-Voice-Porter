@@ -12,14 +12,12 @@
         <TextBlock x:Name="textBlock_generationOutput_Copy" Margin="10,10,10,111" TextWrapping="WrapWithOverflow">
             DEV ONLY!!!<LineBreak/>
             1. Choose a character to work with<LineBreak />
-            2. Extract the MK8U voice files (.bfwav)<LineBreak />
-            3. Extract the MK8DX voice files (.bfwav)<LineBreak />
-            4. Use LoopingAudioConverter to convert the files to .wav<LineBreak />
-            5. Place the MK8U .wav's in ./MK8_WAV_files/CharacterName/U"<LineBreak />
-            6. Place the MK8DX .wav's in ./MK8_WAV_files/CharacterName/DX"<LineBreak />
-            7. Repeat steps 1-6 for every character in the game<LineBreak />
-            8. Press Generate JSON! The program will appear to freeze for a while<LineBreak />
-            9. When complete, a message will appear below the button!
+            2. Extract the MK8DX voice files (.bfwav)<LineBreak />
+            3. Use LoopingAudioConverter to convert the files to .wav<LineBreak />
+            4. Place the MK8DX .wav's in ./MK8_WAV_files/CharacterName/"<LineBreak />
+            5. Repeat steps 1-4 for every character in the game<LineBreak />
+            6. Press Generate JSON! The program will appear to freeze for a while<LineBreak />
+            7. When complete, a message will appear below the button!
         </TextBlock>
         <Button x:Name="btn_GenerateUChecksums" Content="Generate U Checksum Data" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_GenerateUChecksums_Click"/>
 
