@@ -59,6 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AudioComparison.cs" />
+    <Compile Include="ChecksumData.cs" />
     <Compile Include="DataGenerationWindow.xaml.cs">
       <DependentUpon>DataGenerationWindow.xaml</DependentUpon>
     </Compile>

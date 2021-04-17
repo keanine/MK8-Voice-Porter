@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Data Generation (DEV ONLY!!!)" Height="334.228" Width="492.952">
     <Grid>
-        <TextBlock x:Name="textBlock_generationOutput" Margin="10,222,10,10" TextWrapping="Wrap" Text="Please read the instructions to generate the JSON data."/>
+        <TextBlock x:Name="textBlock_generationOutput" Margin="10,222,10,35" TextWrapping="Wrap" Text="Please read the instructions to generate the JSON data."/>
         <Button x:Name="btn_GenerateJSON" Content="Generate JSON" Margin="10,197,10,0" VerticalAlignment="Top" Click="btn_GenerateJSON_Click"/>
         <TextBlock x:Name="textBlock_generationOutput_Copy" Margin="10,10,10,111" TextWrapping="WrapWithOverflow">
             DEV ONLY!!!<LineBreak/>
@@ -21,6 +21,7 @@
             8. Press Generate JSON! The program will appear to freeze for a while<LineBreak />
             9. When complete, a message will appear below the button!
         </TextBlock>
+        <Button x:Name="btn_GenerateUChecksums" Content="Generate U Checksum Data" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_GenerateUChecksums_Click"/>
 
     </Grid>
 </Window>

@@ -136,18 +136,4 @@ namespace MK8VoicePorter
             Process.Start(outputFolderName);
         }
     }
-
-    public struct FileWithChecksum
-    {
-        public string fullFilePath;
-        public string fileName;
-        public string checksumMD5;
-        
-        public FileWithChecksum(string fullFilePath, string fileName, string checksumMD5)
-        {
-            this.fullFilePath = fullFilePath;
-            this.fileName = fileName;
-            this.checksumMD5 = checksumMD5;
-        }
-    }
 }

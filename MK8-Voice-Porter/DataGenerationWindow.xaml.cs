@@ -34,5 +34,11 @@ namespace MK8VoicePorter
             AudioComparison comparison = new AudioComparison();
             comparison.GenerateJSONData(this);
         }
+
+        private void btn_GenerateUChecksums_Click(object sender, RoutedEventArgs e)
+        {
+            AudioComparison comparison = new AudioComparison();
+            comparison.GenerateUChecksumData(this);
+        }
     }
 }

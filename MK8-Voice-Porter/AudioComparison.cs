@@ -127,6 +127,8 @@ namespace MK8VoicePorter
         };
         static List<Tuple<string, string>> unusedAliases = new List<Tuple<string, string>>();
 
+        private ChecksumData uChecksumData;
+
         public string GetMD5(string audioFilePath)
         {
             // Start the child process.
@@ -147,6 +149,40 @@ namespace MK8VoicePorter
             return output;
         }
 
+        public void GenerateUChecksumData(DataGenerationWindow window)
+        {
+            string[] characterFolders = Directory.GetDirectories("./MK8_WAV_files/");
+
+            foreach (string characterFolder in characterFolders)
+            {
+                List<string> uFiles = new List<string>();
+                List<string> dxFiles = new List<string>();
+                uFiles.AddRange(Directory.GetFiles(characterFolder + "/U/"));
+                dxFiles.AddRange(Directory.GetFiles(characterFolder + "/DX/"));
+
+                uChecksumData = new ChecksumData();
+                uChecksumData.platform = "U";
+                uChecksumData.elements = new FileWithChecksum[uFiles.Count];
+
+                //Generate the checksum and store the results in a list of FileWithChecksum
+                for (int u = 0; u < uFiles.Count; u++)
+                {
+                    string uMD5 = GetMD5(uFiles[u]);
+                    uChecksumData.elements[u] = new FileWithChecksum(uFiles[u], Path.GetFileNameWithoutExtension(uFiles[u]), uMD5);
+                }
+
+                if (!Directory.Exists("data/checksums/"))
+                {
+                    Directory.CreateDirectory("data/checksums/");
+                }
+
+                string jsonString = JsonConvert.SerializeObject(uChecksumData, Formatting.Indented);
+                StreamWriter writer = new StreamWriter("data/checksums/" + Path.GetFileNameWithoutExtension(characterFolder) + ".json");
+                writer.Write(jsonString);
+                writer.Close();
+            }
+        }
+
         public void GenerateJSONData(DataGenerationWindow window)
         {
             DateTime startTime = DateTime.Now;
@@ -157,12 +193,14 @@ namespace MK8VoicePorter
 
             foreach (string characterFolder in characterFolders)
             {
+                StreamReader reader = new StreamReader("data/checksums/" + Path.GetFileNameWithoutExtension(characterFolder) + ".json");
+                uChecksumData = JsonConvert.DeserializeObject<ChecksumData>(reader.ReadToEnd());
+                reader.Close();
+
                 FileNameData generatedData = new FileNameData();
 
-                List<string> uFiles = new List<string>();
                 List<string> dxFiles = new List<string>();
-                uFiles.AddRange(Directory.GetFiles(characterFolder + "/U/"));
-                dxFiles.AddRange(Directory.GetFiles(characterFolder + "/DX/"));
+                dxFiles.AddRange(Directory.GetFiles(characterFolder + "/"));
 
                 string characterCode = string.Empty;
                 string characterName = string.Empty;
@@ -199,18 +237,12 @@ namespace MK8VoicePorter
                 int currentElement = 0;
 
                 List<FileWithChecksum> dxFileChecksums = new List<FileWithChecksum>();
-                List<FileWithChecksum> uFileChecksums = new List<FileWithChecksum>();
 
                 //Generate the checksum and store the results in a list of FileWithChecksum
                 for (int dx = 0; dx < dxFiles.Count; dx++)
                 {
                     string dxMD5 = GetMD5(dxFiles[dx]);
                     dxFileChecksums.Add(new FileWithChecksum(dxFiles[dx], Path.GetFileNameWithoutExtension(dxFiles[dx]), dxMD5));
-                }
-                for (int u = 0; u < uFiles.Count; u++)
-                {
-                    string uMD5 = GetMD5(uFiles[u]);
-                    uFileChecksums.Add(new FileWithChecksum(uFiles[u], Path.GetFileNameWithoutExtension(uFiles[u]), uMD5));
                 }
 
                 unusedAliases.Clear();
@@ -219,11 +251,11 @@ namespace MK8VoicePorter
                 //Compare the checksum of the DX files against the U files and place into the generated data elements
                 for (int dx = 0; dx < dxFileChecksums.Count; dx++)
                 {
-                    for (int u = 0; u < uFileChecksums.Count; u++)
+                    for (int u = 0; u < uChecksumData.elements.Length; u++)
                     {
-                        if (dxFileChecksums[dx].checksumMD5 == uFileChecksums[u].checksumMD5)
+                        if (dxFileChecksums[dx].checksumMD5 == uChecksumData.elements[u].checksumMD5)
                         {
-                            generatedData.elements[currentElement].wiiuName = uFileChecksums[u].fileName;
+                            generatedData.elements[currentElement].wiiuName = uChecksumData.elements[u].fileName;
                             generatedData.elements[currentElement].switchName = dxFileChecksums[dx].fileName;
                             generatedData.elements[currentElement].userFriendlyName = GetUserFriendlyName(characterCode, characterName, dxFileChecksums[dx].fileName);
 
