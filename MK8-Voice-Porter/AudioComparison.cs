@@ -156,9 +156,7 @@ namespace MK8VoicePorter
             foreach (string characterFolder in characterFolders)
             {
                 List<string> uFiles = new List<string>();
-                List<string> dxFiles = new List<string>();
-                uFiles.AddRange(Directory.GetFiles(characterFolder + "/U/"));
-                dxFiles.AddRange(Directory.GetFiles(characterFolder + "/DX/"));
+                uFiles.AddRange(Directory.GetFiles(characterFolder));
 
                 uChecksumData = new ChecksumData();
                 uChecksumData.platform = "U";
