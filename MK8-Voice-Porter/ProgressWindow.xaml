@@ -1,0 +1,16 @@
+﻿<Window x:Class="MK8VoicePorter.ProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MK8VoicePorter"
+        mc:Ignorable="d"
+        Title="Please Wait..." Height="134.571" Width="310.333" ResizeMode="NoResize"
+        ContentRendered="Window_ContentRendered">
+    <Grid>
+        <ProgressBar x:Name="progressBar" Margin="10,50,10,0" Height="10" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_description" Content="Label" Margin="5,24,10,0" Height="26" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Done" IsEnabled="False" Content="Done" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Height="20" VerticalAlignment="Bottom" Click="btn_Done_Click"/>
+
+    </Grid>
+</Window>

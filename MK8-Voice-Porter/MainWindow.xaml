@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="MK8 WiiU Voice Porter" Height="262.703" Width="550">
     <Grid>
-        <Button Name="btn_Port" Content="Port" Margin="10,0,10,78" Click="btn_Port_Click" Height="20" VerticalAlignment="Bottom"/>
+        <Button Name="btn_Port" IsEnabled="False" Content="Port" Margin="10,0,10,78" Height="20" VerticalAlignment="Bottom"/>
         <TextBlock Name="textBlock_ConsoleOutput" Margin="10,0,10,10" TextWrapping="Wrap" Text="Console Output..." Height="63" VerticalAlignment="Bottom"/>
         <Button Name="btn_DataGeneration" Content="Data Generation (DEV ONLY)" Margin="0,10,10,0" VerticalAlignment="Top" Click="btn_DataGeneration_Click" HorizontalAlignment="Right" Width="173"/>
-        <TextBlock Margin="10,35,10,0" TextWrapping="Wrap" Height="45" VerticalAlignment="Top">
-            Currently you need to put your files in the input-files folder.
-            After porting, your new files can be found in the output-files folder.
+        <TextBlock Margin="10,35,10,0" TextWrapping="Wrap" Height="63" VerticalAlignment="Top">
+            Currently you need to put your files in files/input/ <LineBreak />
+            After porting, your new files can be found in files/output/ <LineBreak />
             Future versions will be more user friendly. WiiU only for now.
         </TextBlock>
-        <ComboBox x:Name="cmb_TargetCharacter" HorizontalAlignment="Left" Margin="133,0,0,103" Width="120" Height="22" VerticalAlignment="Bottom"/>
-        <Label Content="Character to port to:" HorizontalAlignment="Left" Margin="10,0,0,103" Height="26" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="cmb_TargetDriver" HorizontalAlignment="Left" Margin="133,0,0,103" Width="120" Height="22" VerticalAlignment="Bottom"/>
+        <Label Content="Driver to port to:" HorizontalAlignment="Left" Margin="10,0,0,103" Height="26" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

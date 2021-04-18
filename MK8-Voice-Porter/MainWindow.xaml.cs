@@ -23,24 +23,14 @@ namespace MK8VoicePorter
     {
         private DataGenerationWindow dataGenerationWindow;
 
-        private VoicePorter voicePorter;
-
-
         public MainWindow()
         {
             InitializeComponent();
-            voicePorter = new VoicePorter(this);
-        }
-
-        private void btn_Port_Click(object sender, RoutedEventArgs e)
-        {
-            voicePorter.Port();
-            textBlock_ConsoleOutput.Text = "Complete!";
         }
 
         private void btn_DataGeneration_Click(object sender, RoutedEventArgs e)
         {
-            dataGenerationWindow = new DataGenerationWindow(this, voicePorter);
+            dataGenerationWindow = new DataGenerationWindow(this);
             dataGenerationWindow.Show();
         }
     }
