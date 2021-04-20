@@ -14,7 +14,7 @@ Choose the character you wish to port to.
 Press "Port to BARS file".
 The files can be found in the Output folder.
 
-# User-Friendly Filenames
+# List of User-Friendly Filenames
 ```
 SFX_HORN_OFF
 SFX_HORN_ON
