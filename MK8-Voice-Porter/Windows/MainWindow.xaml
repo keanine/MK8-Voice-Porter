@@ -1,0 +1,23 @@
+﻿<Window x:Class="MK8VoicePorter.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MK8VoicePorter.Windows"
+        mc:Ignorable="d"
+        Title="MK8 WiiU Voice Porter" Height="262.842" Width="386.679" ResizeMode="NoResize">
+    <Grid>
+        <Button Name="btn_Port" IsEnabled="True" Content="Port" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_Port_Click"/>
+        <Button Name="btn_DataGeneration" IsEnabled="False" Content="Dev" Margin="0,10,73,0" Click="btn_DataGeneration_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40"/>
+        <TextBlock Margin="10,10,118,0" TextWrapping="Wrap" Height="33" VerticalAlignment="Top">
+            Future versions will be more user friendly.
+        </TextBlock>
+        <ComboBox x:Name="cmb_TargetDriver" HorizontalAlignment="Right" Margin="0,0,10,35" Width="159" Height="22" VerticalAlignment="Bottom" SelectionChanged="cmb_TargetDriver_SelectionChanged"/>
+        <Label Content="Output Format:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="105,0,0,62" Height="26" VerticalAlignment="Bottom" Width="96"/>
+        <Button x:Name="btn_About" Content="About" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="58" Click="btn_About_Click"/>
+        <Button Content="Input Folder" Margin="80,48,80,0" Height="22" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmb_TargetFormat" HorizontalAlignment="Right" Margin="0,0,10,62" Width="159" Height="22" VerticalAlignment="Bottom" SelectionChanged="cmb_TargetFormat_SelectionChanged"/>
+        <Label Content="Output Driver:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="105,0,0,35" Height="26" VerticalAlignment="Bottom" Width="96"/>
+        <Button Content="Output Folder" Margin="80,75,80,0" Height="22" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -17,30 +17,34 @@ namespace MK8VoicePorter
             foreach (string wavDriverFolder in wavDriverFolders)
             {
                 string driverName = Path.GetFileName(wavDriverFolder);
-                Utilities.progressDesc = $"Generating {driverName} file info...";
 
-                FileInfoData fileInfoData = new FileInfoData();
-
-                string[] wavFiles = Directory.GetFiles(wavDriverFolder);
-
-                foreach (string wavFile in wavFiles)
+                if (!File.Exists(Path.Combine(fileInfoDirectory, driverName + ".json")))
                 {
-                    string consoleOutput = Utilities.RunConsoleCommand("GetMD5.bat", $"{wavFile} MD5");
-                    string[] stringSeparators = new string[] { "\r\n" };
-                    string checksum = consoleOutput.Split(stringSeparators, StringSplitOptions.None)[3];
+                    Utilities.progressDesc = $"Generating {driverName} file info...";
 
-                    string wavFileName = Path.GetFileNameWithoutExtension(wavFile);
+                    FileInfoData fileInfoData = new FileInfoData();
 
-                    long wavFileSize = new FileInfo(wavFile).Length;
-                    long bfwavFileSize = new FileInfo(Path.Combine(bfwavDirectory, driverName, wavFileName + ".bfwav")).Length;
+                    string[] wavFiles = Directory.GetFiles(wavDriverFolder);
 
-                    fileInfoData.AddElement(Path.GetFileNameWithoutExtension(wavFileName), bfwavFileSize.ToString(), wavFileSize.ToString(), checksum);
+                    foreach (string wavFile in wavFiles)
+                    {
+                        string consoleOutput = Utilities.RunConsoleCommand("tools/GetMD5.bat", $"{wavFile} MD5", "");
+                        string[] stringSeparators = new string[] { "\r\n" };
+                        string checksum = consoleOutput.Split(stringSeparators, StringSplitOptions.None)[3];
+
+                        string wavFileName = Path.GetFileNameWithoutExtension(wavFile);
+
+                        long wavFileSize = new FileInfo(wavFile).Length;
+                        long bfwavFileSize = new FileInfo(Path.Combine(bfwavDirectory, driverName, wavFileName + ".bfwav")).Length;
+
+                        fileInfoData.AddElement(wavFileName, bfwavFileSize.ToString(), wavFileSize.ToString(), checksum);
+                    }
+
+                    string jsonText = JsonConvert.SerializeObject(fileInfoData, Formatting.Indented);
+                    StreamWriter writer = new StreamWriter(Path.Combine(fileInfoDirectory, driverName + ".json"));
+                    writer.Write(jsonText);
+                    writer.Close();
                 }
-
-                string jsonText = JsonConvert.SerializeObject(fileInfoData, Formatting.Indented);
-                StreamWriter writer = new StreamWriter(Path.Combine(fileInfoDirectory, driverName + ".json"));
-                writer.Write(jsonText);
-                writer.Close();
                 Utilities.progressValue++;
             }
 

@@ -1,0 +1,36 @@
+﻿<Window x:Class="MK8VoicePorter.Windows.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MK8VoicePorter.Windows"
+        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        Title="About" Height="312.775" Width="435.302">
+    <Grid>
+        <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Height="171" VerticalAlignment="Top">
+            A tool for porting and creating voice mods for Mario Kart 8 on the WiiU.
+            <LineBreak />
+            <LineBreak />
+            MK8 Voice Porter includes code or uses tools from the following sources:
+            <LineBreak />
+            ----------------------------------------------------------
+            <LineBreak />
+            WiiU .BARS extraction - <Hyperlink NavigateUri="https://github.com/MrMysterio/Uwizard" RequestNavigate="Hyperlink_RequestNavigate">Uwizard</Hyperlink>
+            <LineBreak />
+            Switch .BARS extraction - <Hyperlink NavigateUri="https://github.com/Dxnielo/BARSViewer" RequestNavigate="Hyperlink_RequestNavigate">BarsViewer</Hyperlink>
+            <LineBreak />
+            BFWAV conversion - <Hyperlink NavigateUri="https://github.com/Thealexbarney/VGAudio" RequestNavigate="Hyperlink_RequestNavigate">VGAudio</Hyperlink>
+            <LineBreak />
+            WAV Manipulation - <Hyperlink NavigateUri="https://github.com/naudio/NAudio" RequestNavigate="Hyperlink_RequestNavigate">NAudio</Hyperlink>
+            <LineBreak />
+            ----------------------------------------------------------
+            <LineBreak />
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Width="260" Height="38" VerticalAlignment="Bottom" Margin="10,0,0,10">
+            <Hyperlink NavigateUri="https://github.com/naudio/NAudio" RequestNavigate="Hyperlink_RequestNavigate">MK8 Voice Porter</Hyperlink>
+            by Keanen Collins (Keanine)
+            <LineBreak /><Bold>Beta v1.0.0</Bold>
+        </TextBlock>
+        <Button x:Name="btn_Help" Content="Help" Margin="0,0,10,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="btn_Help_Click"/>
+    </Grid>
+</Window>

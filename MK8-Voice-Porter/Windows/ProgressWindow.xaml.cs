@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MK8VoicePorter
+namespace MK8VoicePorter.Windows
 {
     /// <summary>
     /// Interaction logic for ProgressWindow.xaml
@@ -43,7 +43,7 @@ namespace MK8VoicePorter
             while (true)
             {
                 (sender as BackgroundWorker).ReportProgress(Utilities.progressValue);
-                Thread.Sleep(500);
+                Thread.Sleep(100);
             }
         }
 
@@ -54,7 +54,6 @@ namespace MK8VoicePorter
 
             if (progressBar.Value == progressBar.Maximum)
             {
-                Utilities.progressValue = 0;
                 btn_Done.IsEnabled = true;
             }
         }
@@ -69,6 +68,11 @@ namespace MK8VoicePorter
         {
             base.OnClosing(e);
             e.Cancel = !allowClosing;
+
+            if (allowClosing)
+            {
+                Utilities.progressValue = 0;
+            }
         }
     }
 }
