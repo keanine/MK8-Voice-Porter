@@ -116,6 +116,9 @@
     <Compile Include="Windows\DataGenerationWindow.xaml.cs">
       <DependentUpon>DataGenerationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ExtractParamsWizard.xaml.cs">
+      <DependentUpon>ExtractParamsWizard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ProgressWindow.xaml.cs">
       <DependentUpon>ProgressWindow.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\DataGenerationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ExtractParamsWizard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

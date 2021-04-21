@@ -34,6 +34,10 @@ namespace MK8VoicePorter
 
         public static string identitiesDirectory = "data/character_identities/";
 
+        public static string driverParamsDirectory = "data/params/driver/";
+        public static string menuParamsDirectory = "data/params/driver_menu/";
+        public static string unlockParamsDirectory = "data/params/driver_open/";
+
         public static void RegenerateAllDirectories()
         {
             Directory.CreateDirectory(barsDirectoryU);
@@ -50,9 +54,11 @@ namespace MK8VoicePorter
 
             Directory.CreateDirectory(inputFolder);
             Directory.CreateDirectory(outputFolder);
-            RegenerateTempFolders();
 
             Directory.CreateDirectory(identitiesDirectory);
+
+            RegenerateTempFolders();
+            RegenerateParamFolders();
         }
 
         public static void RegenerateTempFolders()
@@ -63,10 +69,34 @@ namespace MK8VoicePorter
             Directory.CreateDirectory(finalTempFolder);
         }
 
+        public static void RegenerateParamFolders()
+        {
+            Directory.CreateDirectory(driverParamsDirectory);
+            Directory.CreateDirectory(menuParamsDirectory);
+            Directory.CreateDirectory(unlockParamsDirectory);
+        }
+
         public static void ClearTempFolders()
         {
             Directory.Delete(tempFolder, true);
             RegenerateTempFolders();
+        }
+
+        public static void ClearParamFolders()
+        {
+            foreach (string file in Directory.GetFiles(driverParamsDirectory))
+            {
+                File.Delete(file);
+            }
+            foreach (string file in Directory.GetFiles(menuParamsDirectory))
+            {
+                File.Delete(file);
+            }
+            foreach (string file in Directory.GetFiles(unlockParamsDirectory))
+            {
+                File.Delete(file);
+            }
+            RegenerateParamFolders();
         }
     }
 }

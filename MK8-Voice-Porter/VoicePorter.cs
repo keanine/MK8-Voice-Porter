@@ -58,6 +58,9 @@ namespace MK8VoicePorter
 
             AssignTargetName(tempFiles, GlobalDirectory.finalTempFolder, targetIdentity);
 
+            string param = GlobalDirectory.driverParamsDirectory + targetIdentity.fileName + "_param.bin";
+            File.Copy(param, GlobalDirectory.finalTempFolder + "_param.bin");
+
             //Add a condition for unlock and 
             Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars");
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -44,6 +45,8 @@ namespace MK8VoicePorter.Windows
             cmb_TargetFormat.Items.Add("BFWAV (User-Friendly)");
             cmb_TargetFormat.Items.Add("WAV (User-Friendly)");
             cmb_TargetFormat.SelectedIndex = 0;
+
+            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
         }
 
         private void btn_DataGeneration_Click(object sender, RoutedEventArgs e)
@@ -54,16 +57,32 @@ namespace MK8VoicePorter.Windows
 
         private void btn_Port_Click(object sender, RoutedEventArgs e)
         {
-            if (Directory.GetFiles(GlobalDirectory.outputFolder).Length > 0)
+            if (canPort)
             {
-                MessageBoxResult result = MessageBox.Show("There are files in the output folder. If you continue these will be deleted", "Warning", MessageBoxButton.OKCancel);
-                if (result == MessageBoxResult.Cancel)
+                if ((VoiceFileFormat)cmb_TargetFormat.SelectedIndex == VoiceFileFormat.BARS)
                 {
-                    return;
+                    MessageBoxResult result = MessageBox.Show($"When exporting to BARS, menu and unlock files are currently unsupported. Continue?", "Info", MessageBoxButton.OKCancel);
+                    if (result == MessageBoxResult.Cancel)
+                    {
+                        return;
+                    }
                 }
-            }
 
-            VoicePorter.Port(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+                if (Directory.GetFiles(GlobalDirectory.outputFolder).Length > 0)
+                {
+                    MessageBoxResult result = MessageBox.Show("There are files in the output folder. If you continue these will be deleted", "Warning", MessageBoxButton.OKCancel);
+                    if (result == MessageBoxResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+
+                VoicePorter.Port(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show($"No param.bin was found for {cmb_TargetDriver.SelectedItem}. If you wish to export to BARS you must export your params first", "Error", MessageBoxButton.OK);
+            }
         }
 
         private void btn_About_Click(object sender, RoutedEventArgs e)
@@ -77,11 +96,65 @@ namespace MK8VoicePorter.Windows
         {
             targetFormat = cmb_TargetFormat.SelectedItem.ToString();
             cmb_TargetDriver.IsEnabled = !(cmb_TargetFormat.SelectedItem.ToString().Contains("User-Friendly"));
+            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
         }
 
         private void cmb_TargetDriver_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             targetDriver = cmb_TargetDriver.SelectedItem.ToString();
+            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+        }
+
+        private void btn_InputFolder_Click(object sender, RoutedEventArgs e)
+        {
+            string directory = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "files/input/");
+            Process.Start(directory);
+        }
+
+        private void btn_OutputFolder_Click(object sender, RoutedEventArgs e)
+        {
+            string directory = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "files/output/");
+            Process.Start(directory);
+        }
+
+        private bool canPort = false;
+
+        private void CheckIfCanPort(string targetDriver, VoiceFileFormat targetFormat)
+        {
+            if (targetFormat == VoiceFileFormat.BARS)
+            {
+                if (File.Exists(GlobalDirectory.driverParamsDirectory + targetDriver + "_param.bin")) // if target has param.bin
+                {
+                    canPort = true;
+                    btn_Port.Foreground = Brushes.Black;
+
+                    btn_ExtractParams.Visibility = Visibility.Collapsed;
+                    Thickness margin = lbl_Message.Margin;
+                    margin.Top = 35;
+                    lbl_Message.Margin = margin;
+                }
+                else
+                {
+                    canPort = false;
+                    btn_Port.Foreground = Brushes.Red;
+
+                    btn_ExtractParams.Visibility = Visibility.Visible;
+                    Thickness margin = lbl_Message.Margin;
+                    margin.Top = 60;
+                    lbl_Message.Margin = margin;
+                    return;
+                }
+            }
+        }
+
+        private void btn_ExtractParams_Click(object sender, RoutedEventArgs e)
+        {
+            ExtractParamsWizard extractParams = new ExtractParamsWizard();
+            extractParams.Owner = this;
+            extractParams.ShowDialog();
+
+            //Return
+            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
         }
     }
 }
