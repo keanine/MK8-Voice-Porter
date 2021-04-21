@@ -46,7 +46,7 @@ namespace MK8VoicePorter.Windows
             cmb_TargetFormat.Items.Add("WAV (User-Friendly)");
             cmb_TargetFormat.SelectedIndex = 0;
 
-            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+            CheckIfCanPort();
         }
 
         private void btn_DataGeneration_Click(object sender, RoutedEventArgs e)
@@ -96,13 +96,13 @@ namespace MK8VoicePorter.Windows
         {
             targetFormat = cmb_TargetFormat.SelectedItem.ToString();
             cmb_TargetDriver.IsEnabled = !(cmb_TargetFormat.SelectedItem.ToString().Contains("User-Friendly"));
-            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+            CheckIfCanPort();
         }
 
         private void cmb_TargetDriver_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             targetDriver = cmb_TargetDriver.SelectedItem.ToString();
-            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+            CheckIfCanPort();
         }
 
         private void btn_InputFolder_Click(object sender, RoutedEventArgs e)
@@ -119,30 +119,36 @@ namespace MK8VoicePorter.Windows
 
         private bool canPort = false;
 
-        private void CheckIfCanPort(string targetDriver, VoiceFileFormat targetFormat)
+        private void CheckIfCanPort()
         {
-            if (targetFormat == VoiceFileFormat.BARS)
+            if (cmb_TargetDriver.SelectedItem != null)
             {
-                if (File.Exists(GlobalDirectory.driverParamsDirectory + targetDriver + "_param.bin")) // if target has param.bin
-                {
-                    canPort = true;
-                    btn_Port.Foreground = Brushes.Black;
+                string targetDriver = cmb_TargetDriver.SelectedItem.ToString();
+                VoiceFileFormat targetFormat = (VoiceFileFormat)cmb_TargetFormat.SelectedIndex;
 
-                    btn_ExtractParams.Visibility = Visibility.Collapsed;
-                    Thickness margin = lbl_Message.Margin;
-                    margin.Top = 35;
-                    lbl_Message.Margin = margin;
-                }
-                else
+                if (targetFormat == VoiceFileFormat.BARS)
                 {
-                    canPort = false;
-                    btn_Port.Foreground = Brushes.Red;
+                    if (File.Exists(GlobalDirectory.driverParamsDirectory + targetDriver + "_param.bin")) // if target has param.bin
+                    {
+                        canPort = true;
+                        btn_Port.Foreground = Brushes.Black;
 
-                    btn_ExtractParams.Visibility = Visibility.Visible;
-                    Thickness margin = lbl_Message.Margin;
-                    margin.Top = 60;
-                    lbl_Message.Margin = margin;
-                    return;
+                        btn_ExtractParams.Visibility = Visibility.Collapsed;
+                        Thickness margin = lbl_Message.Margin;
+                        margin.Top = 35;
+                        lbl_Message.Margin = margin;
+                    }
+                    else
+                    {
+                        canPort = false;
+                        btn_Port.Foreground = Brushes.Red;
+
+                        btn_ExtractParams.Visibility = Visibility.Visible;
+                        Thickness margin = lbl_Message.Margin;
+                        margin.Top = 60;
+                        lbl_Message.Margin = margin;
+                        return;
+                    }
                 }
             }
         }
@@ -154,7 +160,7 @@ namespace MK8VoicePorter.Windows
             extractParams.ShowDialog();
 
             //Return
-            CheckIfCanPort(cmb_TargetDriver.SelectedItem.ToString(), (VoiceFileFormat)cmb_TargetFormat.SelectedIndex);
+            CheckIfCanPort();
         }
     }
 }

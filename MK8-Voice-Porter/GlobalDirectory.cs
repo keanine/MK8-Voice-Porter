@@ -40,23 +40,12 @@ namespace MK8VoicePorter
 
         public static void RegenerateAllDirectories()
         {
-            Directory.CreateDirectory(barsDirectoryU);
-            Directory.CreateDirectory(barsDirectoryDX);
-
-            Directory.CreateDirectory(bfwavDirectoryU);
-            Directory.CreateDirectory(bfwavDirectoryDX);
-
-            Directory.CreateDirectory(wavDirectoryU);
-            Directory.CreateDirectory(wavDirectoryDX);
-
-            Directory.CreateDirectory(fileInfoDirectoryU);
-            Directory.CreateDirectory(fileInfoDirectoryDX);
-
             Directory.CreateDirectory(inputFolder);
             Directory.CreateDirectory(outputFolder);
 
             Directory.CreateDirectory(identitiesDirectory);
 
+            //RegenerateDevFolders();
             RegenerateTempFolders();
             RegenerateParamFolders();
         }
@@ -74,6 +63,21 @@ namespace MK8VoicePorter
             Directory.CreateDirectory(driverParamsDirectory);
             Directory.CreateDirectory(menuParamsDirectory);
             Directory.CreateDirectory(unlockParamsDirectory);
+        }
+
+        public static void RegenerateDevFolders()
+        {
+            Directory.CreateDirectory(barsDirectoryU);
+            Directory.CreateDirectory(barsDirectoryDX);
+
+            Directory.CreateDirectory(bfwavDirectoryU);
+            Directory.CreateDirectory(bfwavDirectoryDX);
+
+            Directory.CreateDirectory(wavDirectoryU);
+            Directory.CreateDirectory(wavDirectoryDX);
+
+            Directory.CreateDirectory(fileInfoDirectoryU);
+            Directory.CreateDirectory(fileInfoDirectoryDX);
         }
 
         public static void ClearTempFolders()

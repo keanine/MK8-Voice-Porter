@@ -20,7 +20,7 @@
         <TextBox x:Name="txt_updateContentFolder" Height="23" Margin="10,150,80,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
         <Button Content="Browse..." Margin="0,150,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="65"/>
         <TextBlock x:Name="lbl_ConsoleOutput" Margin="10,0,10,30" TextWrapping="Wrap" Height="22" VerticalAlignment="Bottom" TextAlignment="Center">
-            User info
+            The window may freeze during extraction. Please do not close it.
         </TextBlock>
     </Grid>
 </Window>

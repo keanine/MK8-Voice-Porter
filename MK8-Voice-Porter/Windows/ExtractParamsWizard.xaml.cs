@@ -23,7 +23,6 @@ namespace MK8VoicePorter.Windows
         public ExtractParamsWizard()
         {
             InitializeComponent();
-            lbl_ConsoleOutput.Text = "";
         }
 
         private void btn_ExtractParams_Click(object sender, RoutedEventArgs e)

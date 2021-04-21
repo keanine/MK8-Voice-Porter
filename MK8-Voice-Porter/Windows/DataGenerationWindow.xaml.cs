@@ -17,6 +17,7 @@ namespace MK8VoicePorter.Windows
         {
             InitializeComponent();
             this.window = window;
+            GlobalDirectory.RegenerateDevFolders();
         }
 
         private void btn_ConvertUwavs_Click(object sender, RoutedEventArgs e)
