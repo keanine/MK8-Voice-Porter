@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Windows;
 
-namespace MK8VoicePorter.Windows
+namespace MK8VoiceTool.Windows
 {
     /// <summary>
     /// Interaction logic for DataGenerationWindow.xaml
@@ -22,13 +22,11 @@ namespace MK8VoicePorter.Windows
 
         private void btn_ConvertUwavs_Click(object sender, RoutedEventArgs e)
         {
-            //Converter.ConvertBFWAVtoWAV(Strings.bfwavDirectoryU, Strings.wavDirectoryU);
             Converter.ExtractAllUBARS();
         }
 
         private void btn_ConvertDXwavs_Click(object sender, RoutedEventArgs e)
         {
-            //Converter.ConvertBFWAVtoWAV(Strings.bfwavDirectoryDX, Strings.wavDirectoryDX);
             int barsCount = Directory.GetFiles(GlobalDirectory.barsDirectoryDX, "*.bars").Length;
 
             BackgroundWorker generateFileInfoWorker = new BackgroundWorker();
@@ -99,21 +97,6 @@ namespace MK8VoicePorter.Windows
         private void btn_GenerateJSON_Click(object sender, RoutedEventArgs e)
         {
             DriverIdentityGenerator.GenerateDriverIdentityData();
-
-
-
-
-            //string json = File.ReadAllText(GlobalDirectory.fileInfoDirectoryDX + "Link.json");
-            //FileInfoData data = Newtonsoft.Json.JsonConvert.DeserializeObject<FileInfoData>(json);
-
-            //string output = string.Empty;
-
-            //foreach (var element in data.elements)
-            //{
-            //    output += $"(\"\", \"{element.fileName}\"),\n";
-            //}
-
-            //File.WriteAllText("tempFiles.txt", output);
         }
     }
 }

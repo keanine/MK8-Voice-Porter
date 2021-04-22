@@ -5,27 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MK8VoicePorter
+namespace MK8VoiceTool
 {
     class GlobalDirectory
     {
         public static string VGAudioCli = "tools/VGAudioCli/";
 
-        public static string barsDirectoryU = "data/audio/bars/u/";
-        public static string barsDirectoryDX = "data/audio/bars/dx/";
+        public static string appdataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/MK8VoiceTool/";
 
-        public static string bfwavDirectoryU = "data/audio/bfwav/u/";
-        public static string bfwavDirectoryDX = "data/audio/bfwav/dx/";
+        public static string barsDirectoryU =  appdataFolder + "data/audio/bars/u/";
+        public static string barsDirectoryDX = appdataFolder + "data/audio/bars/dx/";
 
-        public static string wavDirectoryU = "data/audio/wav/u/";
-        public static string wavDirectoryDX = "data/audio/wav/dx/";
+        public static string bfwavDirectoryU = appdataFolder + "data/audio/bfwav/u/";
+        public static string bfwavDirectoryDX = appdataFolder + "data/audio/bfwav/dx/";
 
-        public static string fileInfoDirectoryU = "data/file_info/u/";
-        public static string fileInfoDirectoryDX = "data/file_info/dx/";
+        public static string wavDirectoryU = appdataFolder + "data/audio/wav/u/";
+        public static string wavDirectoryDX = appdataFolder + "data/audio/wav/dx/";
+
+        public static string fileInfoDirectoryU = appdataFolder + "data/file_info/u/";
+        public static string fileInfoDirectoryDX = appdataFolder + "data/file_info/dx/";
 
         public static string inputFolder = "files/input/";
         public static string outputFolder = "files/output/";
-        public static string tempFolder = "files/temp/";
+        public static string tempFolder = appdataFolder + "temp/";
 
         public static string wavTempFolder = tempFolder + "wav/";
         public static string bfwavTempFolder = tempFolder + "bfwav/";
@@ -34,9 +36,9 @@ namespace MK8VoicePorter
 
         public static string identitiesDirectory = "data/character_identities/";
 
-        public static string driverParamsDirectory = "data/params/driver/";
-        public static string menuParamsDirectory = "data/params/driver_menu/";
-        public static string unlockParamsDirectory = "data/params/driver_open/";
+        public static string driverParamsDirectory = appdataFolder + "data/params/driver/";
+        public static string menuParamsDirectory = appdataFolder + "data/params/driver_menu/";
+        public static string unlockParamsDirectory = appdataFolder + "data/params/driver_open/";
 
         public static void RegenerateAllDirectories()
         {

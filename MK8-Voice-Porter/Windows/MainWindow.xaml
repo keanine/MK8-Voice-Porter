@@ -1,11 +1,11 @@
-﻿<Window x:Class="MK8VoicePorter.Windows.MainWindow"
+﻿<Window x:Class="MK8VoiceTool.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MK8VoicePorter.Windows"
+        xmlns:local="clr-namespace:MK8VoiceTool.Windows"
         mc:Ignorable="d"
-        Title="MK8 WiiU Voice Tools" Height="262.842" Width="386.679" ResizeMode="NoResize">
+        Title="MK8 Voice Tools for WiiU" Height="262.842" Width="386.679" ResizeMode="NoResize" Icon="/MK8VoiceTool;component/icon.ico">
     <Grid>
         <Button Name="btn_Port" IsEnabled="True" Content="Port" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_Port_Click"/>
         <Button Name="btn_DataGeneration" IsEnabled="False" Content="Dev" Margin="259,10,73,0" Click="btn_DataGeneration_Click" Height="20" VerticalAlignment="Top"/>

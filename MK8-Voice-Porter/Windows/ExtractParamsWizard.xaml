@@ -1,10 +1,10 @@
-﻿<Window x:Class="MK8VoicePorter.Windows.ExtractParamsWizard"
+﻿<Window x:Class="MK8VoiceTool.Windows.ExtractParamsWizard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MK8VoicePorter.Windows"
-        mc:Ignorable="d"
+        xmlns:local="clr-namespace:MK8VoiceTool.Windows"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
         Title="Extract Params" Height="297.946" Width="387.5">
     <Grid>
         <Button x:Name="btn_ExtractParams" Content="Extract Params" Margin="105,0,105,10" Height="20" VerticalAlignment="Bottom" Click="btn_ExtractParams_Click"/>
@@ -14,11 +14,12 @@
 
         <Label Content="Mario Kart 8 content Folder" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_baseContentFolder" Height="23" Margin="10,96,80,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
-        <Button Content="Browse..." Margin="0,96,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="65"/>
+        <Button x:Name="btn_BrowseBase" Content="Browse..." Margin="0,96,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="65" Click="btn_BrowseBase_Click"/>
 
         <Label Content="Mario Kart 8 Update content Folder" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_updateContentFolder" Height="23" Margin="10,150,80,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
-        <Button Content="Browse..." Margin="0,150,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="65"/>
+        <Button x:Name="btn_BrowseUpdate" Content="Browse..." Margin="0,150,10,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="65" Click="btn_BrowseUpdate_Click"/>
+        
         <TextBlock x:Name="lbl_ConsoleOutput" Margin="10,0,10,30" TextWrapping="Wrap" Height="22" VerticalAlignment="Bottom" TextAlignment="Center">
             The window may freeze during extraction. Please do not close it.
         </TextBlock>

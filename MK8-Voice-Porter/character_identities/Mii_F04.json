@@ -1,0 +1,576 @@
+{
+  "fileName": "Mii_F04",
+  "driverName": "Mii_F04",
+  "driverCode": "MF4",
+  "voiceclipCount": 81,
+  "elementCount": 81,
+  "elements": [
+    {
+      "userFriendlyName": "TRICK_SB_1",
+      "uName": "Mii_F04_Action_Attack_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SB",
+      "bfwavFileSize": "6520",
+      "checksumMD5": "da715f19e1fc570ec0bc2eb035e10be9"
+    },
+    {
+      "userFriendlyName": "TRICK_SB_2",
+      "uName": "Mii_F04_Action_Attack_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SB2",
+      "bfwavFileSize": "5088",
+      "checksumMD5": "44de9fadba107bcd7d87dc2b9aa968ac"
+    },
+    {
+      "userFriendlyName": "ITEM_PLACE_BEHIND_2",
+      "uName": "Mii_F04_Action_Attack_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_PUT_END",
+      "bfwavFileSize": "4680",
+      "checksumMD5": "8a622c3a4a1515c8d738e1e63cf9a42f"
+    },
+    {
+      "userFriendlyName": "TRICK_SB_3",
+      "uName": "Mii_F04_Action_Attack_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SB_END",
+      "bfwavFileSize": "4680",
+      "checksumMD5": "8a622c3a4a1515c8d738e1e63cf9a42f"
+    },
+    {
+      "userFriendlyName": "DASH_S_1",
+      "uName": "Mii_F04_Action_Cannon_01_2_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH_S",
+      "bfwavFileSize": "22152",
+      "checksumMD5": "785fa887e8847335b0e4d0e41c01d6ec"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_2",
+      "uName": "Mii_F04_Action_Cannon_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_STRM2",
+      "bfwavFileSize": "52088",
+      "checksumMD5": "911e3116da3dec80206f07d15f23264a"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_3",
+      "uName": "Mii_F04_Action_Cannon_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_STRM_END",
+      "bfwavFileSize": "30384",
+      "checksumMD5": "1fbbf8918546e3859e455ded197026cf"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_3",
+      "uName": "Mii_F04_Action_Cannon_02_short_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_GLIDE_END",
+      "bfwavFileSize": "22472",
+      "checksumMD5": "0518a8bda362b668686b440e25b3250e"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_1",
+      "uName": "Mii_F04_Action_Cannon_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_STRM",
+      "bfwavFileSize": "55480",
+      "checksumMD5": "87f0a504f2d091e60c6064f7bd2d33f5"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_2",
+      "uName": "Mii_F04_Action_Cannon_03_short_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_GLIDE2",
+      "bfwavFileSize": "29544",
+      "checksumMD5": "e048e169d023889f7f0546056043264d"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_1",
+      "uName": "Mii_F04_Action_Dash_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_DASH",
+      "bfwavFileSize": "20456",
+      "checksumMD5": "04879374ffba2333dafc36a697e99645"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_2",
+      "uName": "Mii_F04_Action_Dash_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_DASH2",
+      "bfwavFileSize": "19016",
+      "checksumMD5": "d29a6333d7265a6e6cd37a7394d23c75"
+    },
+    {
+      "userFriendlyName": "DASH_S_3",
+      "uName": "Mii_F04_Action_Dash_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH_S3",
+      "bfwavFileSize": "26040",
+      "checksumMD5": "da0902e6b8146ba340da00832d46a754"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_3",
+      "uName": "Mii_F04_Action_Dash_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_DASH_END",
+      "bfwavFileSize": "26040",
+      "checksumMD5": "da0902e6b8146ba340da00832d46a754"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_1",
+      "uName": "Mii_F04_Action_Dash_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_GLIDE",
+      "bfwavFileSize": "26040",
+      "checksumMD5": "da0902e6b8146ba340da00832d46a754"
+    },
+    {
+      "userFriendlyName": "DASH_S_4",
+      "uName": "Mii_F04_Action_Dash_04_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH_S_END",
+      "bfwavFileSize": "15968",
+      "checksumMD5": "ccff51d5158cd07db8a5d727e0546fc4"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_1",
+      "uName": "Mii_F04_Action_Dash_04_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SA",
+      "bfwavFileSize": "15968",
+      "checksumMD5": "ccff51d5158cd07db8a5d727e0546fc4"
+    },
+    {
+      "userFriendlyName": "DASH_1",
+      "uName": "Mii_F04_Action_Dash_05_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH",
+      "bfwavFileSize": "29608",
+      "checksumMD5": "fa8484a88c866a3779f108e05cd9a1c5"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_3",
+      "uName": "Mii_F04_Action_JumpAction_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_TOP_END",
+      "bfwavFileSize": "33920",
+      "checksumMD5": "fcefe67498afab13f6fe49af21f4bf47"
+    },
+    {
+      "userFriendlyName": "DASH_3",
+      "uName": "Mii_F04_Action_JumpL_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH3",
+      "bfwavFileSize": "29072",
+      "checksumMD5": "1b267adfca57cf68d7a4110ad5b2447d"
+    },
+    {
+      "userFriendlyName": "DASH_4",
+      "uName": "Mii_F04_Action_JumpL_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH_END",
+      "bfwavFileSize": "36560",
+      "checksumMD5": "8ed2edf19739d56d297d808f1066bc90"
+    },
+    {
+      "userFriendlyName": "DASH_S_2",
+      "uName": "Mii_F04_Action_JumpL_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH_S2",
+      "bfwavFileSize": "36560",
+      "checksumMD5": "8ed2edf19739d56d297d808f1066bc90"
+    },
+    {
+      "userFriendlyName": "TRICK_3",
+      "uName": "Mii_F04_Action_JumpL_03edit_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_END",
+      "bfwavFileSize": "23264",
+      "checksumMD5": "5ea24d8ed2a008fe191d2be4737b2d96"
+    },
+    {
+      "userFriendlyName": "DASH_2",
+      "uName": "Mii_F04_Action_JumpL_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DSH2",
+      "bfwavFileSize": "34688",
+      "checksumMD5": "fc790bb8209489ed00243bb348420dd3"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_1",
+      "uName": "Mii_F04_Action_JumpL_03_rear_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_OVTAK",
+      "bfwavFileSize": "15384",
+      "checksumMD5": "a7e06ebea5bc4adaf577da905d0dbd43"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_1",
+      "uName": "Mii_F04_Action_JumpS_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_HOVER",
+      "bfwavFileSize": "4440",
+      "checksumMD5": "8fc8bb36baf5dc4fc180d2309fab0fa5"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_2",
+      "uName": "Mii_F04_Action_JumpS_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_HOVER2",
+      "bfwavFileSize": "4152",
+      "checksumMD5": "e0964afaa1278f169606ce317c9039d1"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_3",
+      "uName": "Mii_F04_Action_JumpS_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_START_HOVER_END",
+      "bfwavFileSize": "3240",
+      "checksumMD5": "94d56a2a76bfe24d95b0126d446325e9"
+    },
+    {
+      "userFriendlyName": "DAMAGE_BOUND_1",
+      "uName": "Mii_F04_Action_LandingL_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_BOUND",
+      "bfwavFileSize": "11904",
+      "checksumMD5": "fe73e2a19d04d84a273ea07f07c77a96"
+    },
+    {
+      "userFriendlyName": "DAMAGE_BOUND_2",
+      "uName": "Mii_F04_Action_LandingL_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_BOUND_END",
+      "bfwavFileSize": "6896",
+      "checksumMD5": "a66cbd27e9911dc3a8d33b2efff26071"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_2",
+      "uName": "Mii_F04_Action_Overtake_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_OVTAK2",
+      "bfwavFileSize": "11488",
+      "checksumMD5": "99ee8bf8710a31c18d259909663ffb9f"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_1",
+      "uName": "Mii_F04_Action_Slipstream_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_CHARGE",
+      "bfwavFileSize": "28408",
+      "checksumMD5": "48e5707fc152e0171017f83b81b3abbd"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_2",
+      "uName": "Mii_F04_Action_Slipstream_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_CHARGE2",
+      "bfwavFileSize": "28296",
+      "checksumMD5": "6287bcc31c64eee5b00bc59857f7e5e1"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_3",
+      "uName": "Mii_F04_Action_Slipstream_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_HOVER_CHARGE_END",
+      "bfwavFileSize": "22800",
+      "checksumMD5": "970a364876b7e5fb3e6e5db944da5a58"
+    },
+    {
+      "userFriendlyName": "TRICK_1",
+      "uName": "Mii_F04_Action_Wheelie_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT",
+      "bfwavFileSize": "15808",
+      "checksumMD5": "57a51cb652123cecc689a1be03930ad4"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_LAVA_1",
+      "uName": "Mii_F04_Comeback_Fall_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_CMB_LAVA",
+      "bfwavFileSize": "27184",
+      "checksumMD5": "3ef6b36b997e5032438dd4081e6fc04d"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_LAVA_2",
+      "uName": "Mii_F04_Comeback_Fall_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_CMB_LAVA_END",
+      "bfwavFileSize": "20664",
+      "checksumMD5": "00cdc6cd3983567f7fe9be36159c9416"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_WATER_1",
+      "uName": "Mii_F04_Comeback_Water_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_CMB_WATER",
+      "bfwavFileSize": "31032",
+      "checksumMD5": "1034d6c9efa67bd80d8296a0d69c8676"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_WATER_2",
+      "uName": "Mii_F04_Comeback_Water_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_CMB_WATER_END",
+      "bfwavFileSize": "43536",
+      "checksumMD5": "dc8f5b4190f487dc2ea1a7ccc5224e83"
+    },
+    {
+      "userFriendlyName": "FALL_LAVA_1",
+      "uName": "Mii_F04_Damage_Fire_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_LAVA",
+      "bfwavFileSize": "27280",
+      "checksumMD5": "36f8799acb7d21d3cfe095980cf506ab"
+    },
+    {
+      "userFriendlyName": "FALL_LAVA_2",
+      "uName": "Mii_F04_Damage_Fire_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_LAVA_END",
+      "bfwavFileSize": "25568",
+      "checksumMD5": "5b93002931b53ba821610093cd32adf9"
+    },
+    {
+      "userFriendlyName": "ITEM_BLOOPER_2",
+      "uName": "Mii_F04_Damage_Fire_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_GESSO_END",
+      "bfwavFileSize": "24336",
+      "checksumMD5": "9ea5758caa5ca7972c0269c853f1f859"
+    },
+    {
+      "userFriendlyName": "STALL_1",
+      "uName": "Mii_F04_Damage_L_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_STR_FAIL",
+      "bfwavFileSize": "15232",
+      "checksumMD5": "bba2bb29cc84fa00130bd1e2269b89d0"
+    },
+    {
+      "userFriendlyName": "STALL_2",
+      "uName": "Mii_F04_Damage_L_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_STR_FAIL_END",
+      "bfwavFileSize": "20296",
+      "checksumMD5": "b804d4bdff6b51c5496e3f17a8082058"
+    },
+    {
+      "userFriendlyName": "DAMAGE_CRASH_1",
+      "uName": "Mii_F04_Damage_M_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_CRSH",
+      "bfwavFileSize": "13120",
+      "checksumMD5": "97410cb8d76a8c0066619eb5f990d97a"
+    },
+    {
+      "userFriendlyName": "DAMAGE_CRASH_2",
+      "uName": "Mii_F04_Damage_M_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_CRSH_END",
+      "bfwavFileSize": "10272",
+      "checksumMD5": "0289b06ac076fe0669efe835bb312562"
+    },
+    {
+      "userFriendlyName": "DAMAGE_S_1",
+      "uName": "Mii_F04_Damage_Spin_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_S",
+      "bfwavFileSize": "19856",
+      "checksumMD5": "3943b438c91f830c3ebc2b62f96daf7b"
+    },
+    {
+      "userFriendlyName": "DAMAGE_SPIN_1",
+      "uName": "Mii_F04_Damage_Spin_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_SPN",
+      "bfwavFileSize": "19856",
+      "checksumMD5": "3943b438c91f830c3ebc2b62f96daf7b"
+    },
+    {
+      "userFriendlyName": "DAMAGE_SPIN_2",
+      "uName": "Mii_F04_Damage_Spin_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_SPN_END",
+      "bfwavFileSize": "20216",
+      "checksumMD5": "6c3d5ca0fd39b5c364e732e04c7065ca"
+    },
+    {
+      "userFriendlyName": "DAMAGE_S_2",
+      "uName": "Mii_F04_Damage_Spin_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_DMG_S_END",
+      "bfwavFileSize": "20216",
+      "checksumMD5": "6c3d5ca0fd39b5c364e732e04c7065ca"
+    },
+    {
+      "userFriendlyName": "ITEM_BLOOPER_1",
+      "uName": "Mii_F04_Damage_Spin_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_GESSO",
+      "bfwavFileSize": "14512",
+      "checksumMD5": "74f3b3bc7fc0e0c16b090dc393962d7e"
+    },
+    {
+      "userFriendlyName": "FALL_WATER_1",
+      "uName": "Mii_F04_Fall_Water_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_WATER",
+      "bfwavFileSize": "48760",
+      "checksumMD5": "aeb2aedb88f9456bba92455431fcc5f5"
+    },
+    {
+      "userFriendlyName": "FALL_WATER_2",
+      "uName": "Mii_F04_Fall_Water_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_WATER_END",
+      "bfwavFileSize": "56168",
+      "checksumMD5": "ad6a3dff8329c078e86f4cfb0c890b1f"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_1",
+      "uName": "Mii_F04_Goal_Rankin_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_GOD",
+      "bfwavFileSize": "15328",
+      "checksumMD5": "d84881ba12a2351fc5a290ae328b283d"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_2",
+      "uName": "Mii_F04_Goal_Rankin_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SA2",
+      "bfwavFileSize": "15328",
+      "checksumMD5": "d84881ba12a2351fc5a290ae328b283d"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_2",
+      "uName": "Mii_F04_Goal_Rankin_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_GOD2",
+      "bfwavFileSize": "15424",
+      "checksumMD5": "91b74c801b41840a30e71f2ae62e829c"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_3",
+      "uName": "Mii_F04_Goal_Rankin_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_OVTAK3",
+      "bfwavFileSize": "15424",
+      "checksumMD5": "91b74c801b41840a30e71f2ae62e829c"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_3",
+      "uName": "Mii_F04_Goal_Rankin_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_GOD_END",
+      "bfwavFileSize": "14040",
+      "checksumMD5": "6a52d7ba2eb38fc2cba0f3c9cab44e0e"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_3",
+      "uName": "Mii_F04_Goal_Rankin_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT_SA_END",
+      "bfwavFileSize": "14040",
+      "checksumMD5": "6a52d7ba2eb38fc2cba0f3c9cab44e0e"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_5",
+      "uName": "Mii_F04_Goal_Rankin_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_OVTAK_END",
+      "bfwavFileSize": "14040",
+      "checksumMD5": "6a52d7ba2eb38fc2cba0f3c9cab44e0e"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_1",
+      "uName": "Mii_F04_Goal_Rankout_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_BAD",
+      "bfwavFileSize": "30400",
+      "checksumMD5": "11ea94bdf8095a67fd664289cc9f5e7b"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_2",
+      "uName": "Mii_F04_Goal_Rankout_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_BAD2",
+      "bfwavFileSize": "15224",
+      "checksumMD5": "6403ea1a2015d7d03ec8e259ed622796"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_3",
+      "uName": "Mii_F04_Goal_Rankout_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_BAD_END",
+      "bfwavFileSize": "27432",
+      "checksumMD5": "9734fcaea3211859d98bb77ea44d2064"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_1",
+      "uName": "Mii_F04_Goal_Top_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_TOP",
+      "bfwavFileSize": "29448",
+      "checksumMD5": "f5477acb963a84536c397ce317214328"
+    },
+    {
+      "userFriendlyName": "ITEM_STAR_1",
+      "uName": "Mii_F04_Item_Powerup_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_STAR",
+      "bfwavFileSize": "27576",
+      "checksumMD5": "a8e593e9fd5466bf3a3b60e3ac1241b8"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_2",
+      "uName": "Mii_F04_Item_Powerup_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_GOL_TOP2",
+      "bfwavFileSize": "30584",
+      "checksumMD5": "800e9ad9e749620a571b5deae5eceeb8"
+    },
+    {
+      "userFriendlyName": "ITEM_STAR_2",
+      "uName": "Mii_F04_Item_Powerup_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_STAR_END",
+      "bfwavFileSize": "30584",
+      "checksumMD5": "800e9ad9e749620a571b5deae5eceeb8"
+    },
+    {
+      "userFriendlyName": "FALL_SHORT_1",
+      "uName": "Mii_F04_Item_Stolen_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_SHORT",
+      "bfwavFileSize": "6056",
+      "checksumMD5": "cd329b29bfa05bd73aa60664aacf4e1a"
+    },
+    {
+      "userFriendlyName": "FALL_SHORT_2",
+      "uName": "Mii_F04_Item_Stolen_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_FALL_SHORT_END",
+      "bfwavFileSize": "9376",
+      "checksumMD5": "d776e7400ceb451f7e6e8cef0b6b9335"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_1",
+      "uName": "Mii_F04_Item_Success_01f_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_SCES",
+      "bfwavFileSize": "10600",
+      "checksumMD5": "58be2baf8b83f508e97cdaa69ed12098"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_4",
+      "uName": "Mii_F04_Item_Success_01f_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_OVTAK4",
+      "bfwavFileSize": "10600",
+      "checksumMD5": "58be2baf8b83f508e97cdaa69ed12098"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_3",
+      "uName": "Mii_F04_Item_Success_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_SCES_END",
+      "bfwavFileSize": "9664",
+      "checksumMD5": "d1a4c4f61097c598696d528b17de80f5"
+    },
+    {
+      "userFriendlyName": "ITEM_PLACE_BEHIND_1",
+      "uName": "Mii_F04_Item_Success_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_PUT",
+      "bfwavFileSize": "7240",
+      "checksumMD5": "ebd80756ab445860233c760e37eb0be1"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_2",
+      "uName": "Mii_F04_Item_Success_03_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_SCES2",
+      "bfwavFileSize": "7240",
+      "checksumMD5": "ebd80756ab445860233c760e37eb0be1"
+    },
+    {
+      "userFriendlyName": "ITEM_THROW_FORWARD_1",
+      "uName": "Mii_F04_Item_Throw_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_TRW",
+      "bfwavFileSize": "4488",
+      "checksumMD5": "13579bf75e8efbcb0cbd9685d63b8277"
+    },
+    {
+      "userFriendlyName": "ITEM_THROW_FORWARD_2",
+      "uName": "Mii_F04_Item_Throw_02_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_ITM_TRW_END",
+      "bfwavFileSize": "7736",
+      "checksumMD5": "5f42851601dce5de47b15b66b53eb38a"
+    },
+    {
+      "userFriendlyName": "TRICK_2",
+      "uName": "Mii_F04_Select_Kart_01_Amb.b.32.dspadpcm",
+      "dxName": "pVO_MF4_JP_ACT2",
+      "bfwavFileSize": "12952",
+      "checksumMD5": "29f41165630c3881af71f90772dfc22f"
+    },
+    {
+      "userFriendlyName": "SFX_HORN_OFF",
+      "uName": "pSE_HORN_Mii_F04_OFF.dspadpcm",
+      "dxName": "pSE_HORN_Mii_F04_OFF",
+      "bfwavFileSize": "10976",
+      "checksumMD5": "befb579056d8d09e005174d0896d08a2"
+    },
+    {
+      "userFriendlyName": "SFX_HORN_ON",
+      "uName": "pSE_HORN_Mii_F04_ON.dspadpcm",
+      "dxName": "pSE_HORN_Mii_F04_ON",
+      "bfwavFileSize": "13208",
+      "checksumMD5": "b69a1cbe564369c2d2c22975d20670eb"
+    },
+    {
+      "userFriendlyName": "SFX_ITEM_HORN",
+      "uName": "pSE_HORN_Mii_F04_ON_SP.dspadpcm",
+      "dxName": "pSE_HORN_Mii_F04_ON_SP",
+      "bfwavFileSize": "22720",
+      "checksumMD5": "13488182b556e060f254a24db8232321"
+    },
+    {
+      "userFriendlyName": "SELECT_DRIVER",
+      "uName": "pVO_M_MF4_SELECT_CHAR.dspadpcm",
+      "dxName": "pVO_M_MF4_SELECT_CHAR",
+      "bfwavFileSize": "21472",
+      "checksumMD5": "2b048590ecb58e22df6dd4838209019e"
+    }
+  ]
+}

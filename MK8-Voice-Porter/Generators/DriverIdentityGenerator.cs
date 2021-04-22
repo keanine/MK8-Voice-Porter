@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace MK8VoicePorter
+namespace MK8VoiceTool
 {
     class DriverIdentityGenerator
     {

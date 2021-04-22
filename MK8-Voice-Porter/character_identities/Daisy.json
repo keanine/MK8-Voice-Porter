@@ -1,0 +1,576 @@
+{
+  "fileName": "Daisy",
+  "driverName": "DAISY",
+  "driverCode": "DS",
+  "voiceclipCount": 81,
+  "elementCount": 81,
+  "elements": [
+    {
+      "userFriendlyName": "DASH_4",
+      "uName": "CHAR_DAISY_CALL_PPass_03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH_END",
+      "bfwavFileSize": "21048",
+      "checksumMD5": "be3927b27130085f33dd9aa0c62f0607"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_1",
+      "uName": "daisy1_00120_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_ITM_SCES",
+      "bfwavFileSize": "12272",
+      "checksumMD5": "8e3cf651c629a2a032a29b2d6fdc892b"
+    },
+    {
+      "userFriendlyName": "DAMAGE_CRASH_1",
+      "uName": "daisy1_00221_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_DMG_CRSH",
+      "bfwavFileSize": "12368",
+      "checksumMD5": "54147b664190066e9234e674a5e99a3f"
+    },
+    {
+      "userFriendlyName": "DAMAGE_CRASH_2",
+      "uName": "daisy1_00227_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_DMG_CRSH_END",
+      "bfwavFileSize": "6376",
+      "checksumMD5": "98a344d1fe0a68e28ce55d2d27b81136"
+    },
+    {
+      "userFriendlyName": "DAMAGE_S_1",
+      "uName": "daisy1_00244_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_DMG_S",
+      "bfwavFileSize": "10624",
+      "checksumMD5": "dd53fd3aca60247ec06abe80d3500b9f"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_2",
+      "uName": "daisy1_M2_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_SCES2",
+      "bfwavFileSize": "13976",
+      "checksumMD5": "d92e7cda9c10119a16495d4beefd5695"
+    },
+    {
+      "userFriendlyName": "STALL_1",
+      "uName": "daisy2_00239_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_STR_FAIL",
+      "bfwavFileSize": "47944",
+      "checksumMD5": "8c6dd1b2d79f115a4aaa20d79e0fc135"
+    },
+    {
+      "userFriendlyName": "ITEM_HIT_SUCCESS_3",
+      "uName": "daisy2_00254_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_ITM_SCES_END",
+      "bfwavFileSize": "12496",
+      "checksumMD5": "8052c8d6207b2286ab555ac597341ca2"
+    },
+    {
+      "userFriendlyName": "DAMAGE_SPIN_1",
+      "uName": "Diana_Daisy_WHVo_00144FIRE_BALL_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_DMG_SPN",
+      "bfwavFileSize": "22832",
+      "checksumMD5": "fb838de45871e1b71047665398e963e0"
+    },
+    {
+      "userFriendlyName": "DAMAGE_SPIN_2",
+      "uName": "Diana_Daisy_WHVo_00151FIRE_BALL_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_DMG_SPN_END",
+      "bfwavFileSize": "18000",
+      "checksumMD5": "b6f9c6be4a2c2dc4da25a9704151d01f"
+    },
+    {
+      "userFriendlyName": "ITEM_PLACE_BEHIND_2",
+      "uName": "Diana_Daisy_WHVo_00157SELECT_Amb.ny.32.c4.dspadpcm",
+      "dxName": "pVO_DS_ITM_PUT_END",
+      "bfwavFileSize": "7232",
+      "checksumMD5": "456ca8576bdea8d5188f8f81ab03135f"
+    },
+    {
+      "userFriendlyName": "DASH_S_1",
+      "uName": "ds_Action_Dash-04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH_S",
+      "bfwavFileSize": "15712",
+      "checksumMD5": "2d01c84d5203e0349c81870f61899104"
+    },
+    {
+      "userFriendlyName": "DASH_2",
+      "uName": "ds_Action_JumpL-02_short_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH2",
+      "bfwavFileSize": "25784",
+      "checksumMD5": "008a064316ac1e70882dc38fe95f6991"
+    },
+    {
+      "userFriendlyName": "DASH_1",
+      "uName": "ds_Action_JumpL-05_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH",
+      "bfwavFileSize": "22272",
+      "checksumMD5": "0f7838347f1c3349d8afe6a391fb22c3"
+    },
+    {
+      "userFriendlyName": "DASH_S_2",
+      "uName": "ds_Action_JumpM-05_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH_S2",
+      "bfwavFileSize": "12264",
+      "checksumMD5": "88124f344f00cce5109657b21a9ab46b"
+    },
+    {
+      "userFriendlyName": "DASH_S_3",
+      "uName": "ds_Action_LandingL-01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH_S3",
+      "bfwavFileSize": "17240",
+      "checksumMD5": "d81aca194b7f5f0eb4db37f80f0fe05b"
+    },
+    {
+      "userFriendlyName": "DASH_S_4",
+      "uName": "ds_Action_LandingL-05_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH_S_END",
+      "bfwavFileSize": "12040",
+      "checksumMD5": "05990b2dd9e5c43cab413d6bd1eabb80"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_1",
+      "uName": "ds_Action_Overtake-04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_OVTAK",
+      "bfwavFileSize": "10560",
+      "checksumMD5": "7bbca55c8d673a868e66ee6eb8643438"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_2",
+      "uName": "ds_Action_Overtake-10_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_OVTAK2",
+      "bfwavFileSize": "9888",
+      "checksumMD5": "77609a008af1a1566c5b60a8c4a8971f"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_3",
+      "uName": "ds_Action_Slipstream-03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_STRM_END",
+      "bfwavFileSize": "30272",
+      "checksumMD5": "716c3a10d5aee166679685219d7aae50"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_3",
+      "uName": "ds_Action_Wheelie-06_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_OVTAK3",
+      "bfwavFileSize": "11384",
+      "checksumMD5": "709af2252f8dc383de518ade8691df00"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_3",
+      "uName": "ds_Action_Wheelie-08_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_GLIDE_END",
+      "bfwavFileSize": "25328",
+      "checksumMD5": "77ad7ba124e2e618bc662f74263273e9"
+    },
+    {
+      "userFriendlyName": "STALL_2",
+      "uName": "ds_Damage_L-04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_STR_FAIL_END",
+      "bfwavFileSize": "18808",
+      "checksumMD5": "f4c9e2f27749020bf4390ed7e125aa42"
+    },
+    {
+      "userFriendlyName": "DAMAGE_S_2",
+      "uName": "ds_Damage_M-04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DMG_S_END",
+      "bfwavFileSize": "14184",
+      "checksumMD5": "733db62071d3ac8ace620b1920d4b919"
+    },
+    {
+      "userFriendlyName": "DAMAGE_BOUND_1",
+      "uName": "ds_Damage_S-02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DMG_BOUND",
+      "bfwavFileSize": "4576",
+      "checksumMD5": "365e23d3dbe35699c2676f5b2859cbef"
+    },
+    {
+      "userFriendlyName": "DAMAGE_BOUND_2",
+      "uName": "ds_Damage_S-03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DMG_BOUND_END",
+      "bfwavFileSize": "3960",
+      "checksumMD5": "79d9f84c9a8e99aaf13cfe0fc753a400"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_3",
+      "uName": "DS_GV_01_04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SA_END",
+      "bfwavFileSize": "9392",
+      "checksumMD5": "7b51dda890ef4bd981437ba8bc482c29"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_1",
+      "uName": "DS_GV_03_06_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_BAD",
+      "bfwavFileSize": "15192",
+      "checksumMD5": "fb2e1276b1a15bde0843dd263d82d285"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_1",
+      "uName": "DS_GV_05_00_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_GOD",
+      "bfwavFileSize": "22280",
+      "checksumMD5": "2aa564f16ed263c82f6fe0cf522b1a8b"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_3",
+      "uName": "DS_GV_07_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_BAD_END",
+      "bfwavFileSize": "36240",
+      "checksumMD5": "35906ca2db24bcd8fe2f12ac2536e32e"
+    },
+    {
+      "userFriendlyName": "FINISH_BAD_2",
+      "uName": "DS_GV_07_02_cut_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_BAD2",
+      "bfwavFileSize": "37064",
+      "checksumMD5": "a338d79879069bc9bf4170bc3ca9bd4c"
+    },
+    {
+      "userFriendlyName": "ITEM_PLACE_BEHIND_1",
+      "uName": "ds_Item_Put-02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_PUT",
+      "bfwavFileSize": "3816",
+      "checksumMD5": "f2cbf91ba0083668651da7eed5874a8d"
+    },
+    {
+      "userFriendlyName": "ITEM_THROW_FORWARD_1",
+      "uName": "ds_Item_Put-09_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_TRW",
+      "bfwavFileSize": "6848",
+      "checksumMD5": "d315506ba9514814fdb402af0afd7865"
+    },
+    {
+      "userFriendlyName": "ITEM_BLOOPER_2",
+      "uName": "ds_Item_Stolen-01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_GESSO_END",
+      "bfwavFileSize": "12232",
+      "checksumMD5": "1202561810057f9b5f57284c1ceade47"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_3",
+      "uName": "ds_Item_Success-11_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_GOD_END",
+      "bfwavFileSize": "21608",
+      "checksumMD5": "9aea9f57477ad06e2063b0f40d9c7bcb"
+    },
+    {
+      "userFriendlyName": "ITEM_THROW_FORWARD_2",
+      "uName": "ds_Item_Throw-03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_TRW_END",
+      "bfwavFileSize": "9784",
+      "checksumMD5": "9392a2b6346fea53d52acae7ce033194"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_1",
+      "uName": "DS_RA_CHOV_01_00_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_CHARGE",
+      "bfwavFileSize": "13768",
+      "checksumMD5": "25319b0d4829b13a251221f03b10df39"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_2",
+      "uName": "DS_RA_CHOV_01_03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_CHARGE2",
+      "bfwavFileSize": "19208",
+      "checksumMD5": "1035eab488a220437ef647675b678bf6"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_SPIN_3",
+      "uName": "DS_RA_CHOV_03_01_TS0.85_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_CHARGE_END",
+      "bfwavFileSize": "18520",
+      "checksumMD5": "7db997333c1d6cf668d75f70f8610b94"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_2",
+      "uName": "DS_RA_DASL_02_00_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_DASH2",
+      "bfwavFileSize": "23912",
+      "checksumMD5": "e68db074e89383a01864e3a7885c92ee"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_5",
+      "uName": "DS_RA_DASS_02_00_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_OVTAK_END",
+      "bfwavFileSize": "9536",
+      "checksumMD5": "a84868954e5e09bd4651bbc9a0d18007"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_1",
+      "uName": "DS_RA_DHOV_01_02_short_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_DASH",
+      "bfwavFileSize": "24144",
+      "checksumMD5": "bf2e7b5af30f9bbb4c5a35a0a97539c1"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_1",
+      "uName": "DS_RA_GLD_01_02_TS0.8_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_GLIDE",
+      "bfwavFileSize": "26880",
+      "checksumMD5": "6b79b470e71049d400f07c7577ef8b9c"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_1",
+      "uName": "DS_RA_GLD_02_02_cut_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_TOP",
+      "bfwavFileSize": "36056",
+      "checksumMD5": "608079297a369f2a1bd0e7e7730eddca"
+    },
+    {
+      "userFriendlyName": "START_GLIDE_2",
+      "uName": "DS_RA_GLD_03_00_TS0.75short_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_GLIDE2",
+      "bfwavFileSize": "28296",
+      "checksumMD5": "a0258b3303b6d2a99f11e0cdd4d5d31d"
+    },
+    {
+      "userFriendlyName": "ANTI-GRAVITY_DASH_3",
+      "uName": "DS_RA_JUML_01_07_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_HOVER_DASH_END",
+      "bfwavFileSize": "20448",
+      "checksumMD5": "d68ddf1c4c74fad3b6dfb6d7b7c5340b"
+    },
+    {
+      "userFriendlyName": "TRICK_1",
+      "uName": "DS_RA_JUML_01_08_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT",
+      "bfwavFileSize": "17456",
+      "checksumMD5": "59b6ecd2a01f8a12840ebac4afb77b6e"
+    },
+    {
+      "userFriendlyName": "TRICK_2",
+      "uName": "DS_RA_JUML_01_11_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT2",
+      "bfwavFileSize": "22472",
+      "checksumMD5": "4b1bd4145870dd7259710d51a697e535"
+    },
+    {
+      "userFriendlyName": "TRICK_3",
+      "uName": "DS_RA_JUML_01_13_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_END",
+      "bfwavFileSize": "18896",
+      "checksumMD5": "ac95ed3bad4f6793ce5c2a30e9d69bcd"
+    },
+    {
+      "userFriendlyName": "TRICK_SB_1",
+      "uName": "DS_RA_JUMS_01_04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SB",
+      "bfwavFileSize": "14880",
+      "checksumMD5": "c46a5f3a665944b5e0354d33351b3694"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_1",
+      "uName": "DS_RA_JUMS_01_20_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SA",
+      "bfwavFileSize": "12720",
+      "checksumMD5": "b5abb1e38e6bdb59a600a5c83a0c66b7"
+    },
+    {
+      "userFriendlyName": "TRICK_SB_2",
+      "uName": "DS_RA_JUMS_01_21_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SB2",
+      "bfwavFileSize": "10448",
+      "checksumMD5": "9b91947a4ba345ba095ad8942c179323"
+    },
+    {
+      "userFriendlyName": "TRICK_SA_2",
+      "uName": "DS_RA_JUMS_02_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SA2",
+      "bfwavFileSize": "9064",
+      "checksumMD5": "197992ce4ae15a84c7af9779415c2dcd"
+    },
+    {
+      "userFriendlyName": "TRICK_SB_3",
+      "uName": "DS_RA_JUMS_02_03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_JP_ACT_SB_END",
+      "bfwavFileSize": "11408",
+      "checksumMD5": "29e085fdaac4dfa95708bed98e5b5592"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_1",
+      "uName": "DS_RA_SHOV_01_03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_HOVER",
+      "bfwavFileSize": "14256",
+      "checksumMD5": "787c1231870de6e9b7121fbe1028b54e"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_2",
+      "uName": "DS_RA_SHOV_02_00_short_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_HOVER2",
+      "bfwavFileSize": "22784",
+      "checksumMD5": "9694da5094b0859cbec203aeacd90597"
+    },
+    {
+      "userFriendlyName": "START_ANTI-GRAVITY_3",
+      "uName": "DS_RA_SHOV_04_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_START_HOVER_END",
+      "bfwavFileSize": "19904",
+      "checksumMD5": "ac99feb9b6c7d5ee1c548de01f45153d"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_2",
+      "uName": "DS_RA_STRM_02_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_STRM2",
+      "bfwavFileSize": "22824",
+      "checksumMD5": "d5c0e59198cbe5ee6f5d136ba98d648f"
+    },
+    {
+      "userFriendlyName": "ITEM_STAR_1",
+      "uName": "DS_RA_STRM_03_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_STAR",
+      "bfwavFileSize": "25016",
+      "checksumMD5": "0305d8735937f932fdcbf384f03ea6f5"
+    },
+    {
+      "userFriendlyName": "SLIPSTREAM_1",
+      "uName": "DS_RA_STRM_04_05_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_STRM",
+      "bfwavFileSize": "28048",
+      "checksumMD5": "4912d12253ae2ced6d2f1e8c3854e999"
+    },
+    {
+      "userFriendlyName": "OVERTAKE_4",
+      "uName": "DS_RA_SWHL_02_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_OVTAK4",
+      "bfwavFileSize": "22688",
+      "checksumMD5": "f9c2cd74c3f2690d03e8685b692af713"
+    },
+    {
+      "userFriendlyName": "ITEM_STAR_2",
+      "uName": "DS_RA_SWHL_02_04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_STAR_END",
+      "bfwavFileSize": "27536",
+      "checksumMD5": "3082a3731216043f4c654f1d0f86d684"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_2",
+      "uName": "DS_RA_SWHL_03_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_TOP2",
+      "bfwavFileSize": "30912",
+      "checksumMD5": "cc0287031c7ff8a92544ec0747fa1f2a"
+    },
+    {
+      "userFriendlyName": "DASH_3",
+      "uName": "DS_RA_SWHL_04_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_DSH3",
+      "bfwavFileSize": "16088",
+      "checksumMD5": "b5f26edd74563102b0aef2c8a7a65881"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_LAVA_1",
+      "uName": "DS_RD_CMBL_03_00_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_CMB_LAVA",
+      "bfwavFileSize": "25688",
+      "checksumMD5": "f277e591ea096dad7eb8dd6f57f77167"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_LAVA_2",
+      "uName": "DS_RD_CMBL_03_04_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_CMB_LAVA_END",
+      "bfwavFileSize": "17408",
+      "checksumMD5": "c3866450c9f79c78d3321a77f4d9842e"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_WATER_1",
+      "uName": "DS_RD_CMBW_02_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_CMB_WATER",
+      "bfwavFileSize": "16928",
+      "checksumMD5": "8e30856ee8404eec754af92796dbfa33"
+    },
+    {
+      "userFriendlyName": "RETRIEVED_FROM_WATER_2",
+      "uName": "DS_RD_CMBW_02_03_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_CMB_WATER_END",
+      "bfwavFileSize": "17096",
+      "checksumMD5": "2c515c471a84581dfa1a8f8a20800f60"
+    },
+    {
+      "userFriendlyName": "FALL_LAVA_1",
+      "uName": "DS_RD_LAFA_01_00_TS0.85_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_LAVA",
+      "bfwavFileSize": "10744",
+      "checksumMD5": "548639eb424261af51e5eb557e8f8f57"
+    },
+    {
+      "userFriendlyName": "FALL_LAVA_2",
+      "uName": "DS_RD_LAFA_02_02_TS0.8_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_LAVA_END",
+      "bfwavFileSize": "12192",
+      "checksumMD5": "6851ea801d9d0738991e972a98930b74"
+    },
+    {
+      "userFriendlyName": "FALL_SHORT_1",
+      "uName": "DS_RD_SFAL_01_05_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_SHORT",
+      "bfwavFileSize": "12304",
+      "checksumMD5": "cb9263f04738d96b81e65525a94a9ef3"
+    },
+    {
+      "userFriendlyName": "FALL_SHORT_2",
+      "uName": "DS_RD_SFAL_02_01_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_SHORT_END",
+      "bfwavFileSize": "6648",
+      "checksumMD5": "90f144305a83fa43cdf3aaab9b8b6a0a"
+    },
+    {
+      "userFriendlyName": "ITEM_BLOOPER_1",
+      "uName": "DS_RD_SFAL_03_02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_ITM_GESSO",
+      "bfwavFileSize": "9024",
+      "checksumMD5": "b60b0b2cb610260aca539ea32f5a928a"
+    },
+    {
+      "userFriendlyName": "FALL_WATER_1",
+      "uName": "DS_RD_WFAL_01_00_cutShort_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_WATER",
+      "bfwavFileSize": "9568",
+      "checksumMD5": "53500f988cf5db429cdf82836a39e7ca"
+    },
+    {
+      "userFriendlyName": "FALL_WATER_2",
+      "uName": "DS_RD_WFAL_01_04_TS0.75_short_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_FALL_WATER_END",
+      "bfwavFileSize": "10712",
+      "checksumMD5": "a024fff7a4d5c2157900e55b82f1c841"
+    },
+    {
+      "userFriendlyName": "FINISH_FIRST_3",
+      "uName": "ds_Result_1st-06_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_TOP_END",
+      "bfwavFileSize": "25728",
+      "checksumMD5": "6a82622d4dd31adc7ea13072b1269d40"
+    },
+    {
+      "userFriendlyName": "FINISH_GOOD_2",
+      "uName": "ds_Result_2nd-02_Amb.ny.32.dspadpcm",
+      "dxName": "pVO_DS_GOL_GOD2",
+      "bfwavFileSize": "24392",
+      "checksumMD5": "23b90f5f430303b61c464bea498a124e"
+    },
+    {
+      "userFriendlyName": "SFX_HORN_OFF",
+      "uName": "pSE_HORN_DAISY_OFF.dspadpcm",
+      "dxName": "pSE_HORN_DAISY_OFF",
+      "bfwavFileSize": "6920",
+      "checksumMD5": "0a6b7d2244fc902486866efb1104b06b"
+    },
+    {
+      "userFriendlyName": "SFX_HORN_ON",
+      "uName": "pSE_HORN_DAISY_ON.dspadpcm",
+      "dxName": "pSE_HORN_DAISY_ON",
+      "bfwavFileSize": "20416",
+      "checksumMD5": "d2ba93de93370fed83b82141236fc9a3"
+    },
+    {
+      "userFriendlyName": "SFX_ITEM_HORN",
+      "uName": "pSE_HORN_DAISY_ON_SP.dspadpcm",
+      "dxName": "pSE_HORN_DAISY_ON_SP",
+      "bfwavFileSize": "22720",
+      "checksumMD5": "9a7613ddb0ab709162adf2226a72772b"
+    },
+    {
+      "userFriendlyName": "SELECT_DRIVER",
+      "uName": "pVO_M_DS_SELECT_CHAR.dspadpcm",
+      "dxName": "pVO_M_DS_SELECT_CHAR",
+      "bfwavFileSize": "24864",
+      "checksumMD5": "91839114bcb440ea4e9e02ced6f23eb6"
+    }
+  ]
+}

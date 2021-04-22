@@ -1,0 +1,1 @@
+certUtil -hashfile %1 %2

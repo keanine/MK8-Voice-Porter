@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MK8VoicePorter
+namespace MK8VoiceTool
 {
     class FileInfoData
     {

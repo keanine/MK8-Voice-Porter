@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MK8VoicePorter.Windows
+namespace MK8VoiceTool.Windows
 {
     /// <summary>
     /// Interaction logic for ExtractParamsWizard.xaml
@@ -103,43 +103,22 @@ namespace MK8VoicePorter.Windows
             return driverName;
         }
 
-        /*
-                string barsFile = Path.GetFileNameWithoutExtension(barsFilepath);
-                string characterName = string.Empty;
+        private void btn_BrowseBase_Click(object sender, RoutedEventArgs e)
+        {
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                txt_baseContentFolder.Text = dialog.SelectedPath;
+            }
+        }
 
-                if (Utilities.StringStartsWithAny(barsFile, "MenuDriver_", "SNDG_M_"))
-                {
-                    characterName = barsFile.Remove(0, 7);
-                }
-                else if (Utilities.StringStartsWithAny(barsFile, "OpenDriver_", "SNDG_N_"))
-                {
-                    characterName = barsFile.Remove(0, 7);
-                }
-                else if (Utilities.StringStartsWithAny(barsFile, "Driver_", "SNDG_"))
-                {
-                    characterName = barsFile.Remove(0, 5);
-                }
-        */
-
-        //private void list_BarsFiles_Drop(object sender, DragEventArgs e)
-        //{
-        //    if (e.Data.GetDataPresent(DataFormats.FileDrop))
-        //    {
-        //        // Note that you can have more than one file.
-        //        string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-
-        //        foreach (string file in files)
-        //        {
-        //            if (file.EndsWith(".bars"))
-        //            {
-        //                list_BarsFiles.Items.Add(file);
-        //            }
-        //        }
-
-        //        // Assuming you have one file that you care about, pass it off to whatever
-        //        // handling code you have defined.
-        //        //HandleFileOpen(files[0]);
-        //    }
-        //}
+        private void btn_BrowseUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                txt_updateContentFolder.Text = dialog.SelectedPath;
+            }
+        }
     }
 }

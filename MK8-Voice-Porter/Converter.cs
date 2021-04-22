@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using BARSViewer; // For extracting Switch .bars
 using Uwizard; // For extracting WiiU .bars
 
-namespace MK8VoicePorter
+namespace MK8VoiceTool
 {
     class Converter
     {

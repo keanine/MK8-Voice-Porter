@@ -1,7 +1,7 @@
-﻿<Application x:Class="MK8VoicePorter.App"
+﻿<Application x:Class="MK8VoiceTool.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MK8VoicePorter"
+             xmlns:local="clr-namespace:MK8VoiceTool"
              StartupUri="Windows/MainWindow.xaml">
     <Application.Resources>
          

@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MK8VoicePorter.Windows
+namespace MK8VoiceTool.Windows
 {
     /// <summary>
     /// Interaction logic for About.xaml

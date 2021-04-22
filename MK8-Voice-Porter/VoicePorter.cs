@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace MK8VoicePorter
+namespace MK8VoiceTool
 {
     public enum VoiceFileFormat { BARS, BFWAV, BFWAV_Friendly, WAV_Friendly }
 
@@ -61,8 +61,8 @@ namespace MK8VoicePorter
             string param = GlobalDirectory.driverParamsDirectory + targetIdentity.fileName + "_param.bin";
             File.Copy(param, GlobalDirectory.finalTempFolder + "_param.bin");
 
-            //Add a condition for unlock and 
-            Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars");
+            //Add a condition for unlock and menu
+            Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars", 0x020);
         }
 
         public static void PortToBFWAV(string targetDriverFile)
@@ -79,7 +79,6 @@ namespace MK8VoicePorter
         public static void PortToFriendlyBFWAV(string targetDriverFile)
         {
             DriverIdentityData[] driverIdentities = DeserializeDriverIdentityData();
-            DriverIdentityData targetIdentity = FindTargetDriverIdentity(targetDriverFile, driverIdentities);
 
             Converter.ConvertFilesToBFWAV(GlobalDirectory.inputFolder, GlobalDirectory.bfwavTempFolder);
             RenametoFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.outputFolder, "bfwav", driverIdentities);
@@ -88,7 +87,6 @@ namespace MK8VoicePorter
         public static void PortToFriendlyWAV(string targetDriverFile)
         {
             DriverIdentityData[] driverIdentities = DeserializeDriverIdentityData();
-            DriverIdentityData targetIdentity = FindTargetDriverIdentity(targetDriverFile, driverIdentities);
 
             FilesToWAV(GlobalDirectory.inputFolder, GlobalDirectory.wavTempFolder);
             RenametoFriendlyAlias(GlobalDirectory.wavTempFolder, GlobalDirectory.outputFolder, "wav", driverIdentities);
