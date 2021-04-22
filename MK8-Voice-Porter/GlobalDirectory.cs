@@ -33,6 +33,7 @@ namespace MK8VoiceTool
         public static string bfwavTempFolder = tempFolder + "bfwav/";
         public static string friendlyTempFolder = tempFolder + "friendly/";
         public static string finalTempFolder = tempFolder + "final/";
+        public static string paramCheckTempFolder = tempFolder + "param_check/";
 
         public static string identitiesDirectory = "data/character_identities/";
 
@@ -58,6 +59,7 @@ namespace MK8VoiceTool
             Directory.CreateDirectory(bfwavTempFolder);
             Directory.CreateDirectory(friendlyTempFolder);
             Directory.CreateDirectory(finalTempFolder);
+            Directory.CreateDirectory(paramCheckTempFolder);
         }
 
         public static void RegenerateParamFolders()

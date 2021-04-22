@@ -2,8 +2,8 @@
   "fileName": "Lemmy",
   "driverName": "LEMMY",
   "driverCode": "LEM",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SA_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_LEM_SELECT_CHAR",
       "bfwavFileSize": "50008",
       "checksumMD5": "3980b223cede483d5ba8a11e467c65b3"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_LEM.dspadpcm",
+      "dxName": "pVO_N_LEM.dspadpcm",
+      "bfwavFileSize": "42448",
+      "checksumMD5": "dcc469a1249bebf4d4ee22856cf56a78"
     }
   ]
 }

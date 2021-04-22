@@ -2,8 +2,8 @@
   "fileName": "Kinopico",
   "driverName": "KINOPIKO",
   "driverCode": "KC",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_2",
@@ -298,6 +298,13 @@
       "dxName": "pVO_M_KC_SELECT_CHAR",
       "bfwavFileSize": "37072",
       "checksumMD5": "afe244bca49acd2bf9275660119acf3f"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_KC.dspadpcm",
+      "dxName": "pVO_N_KC.dspadpcm",
+      "bfwavFileSize": "48912",
+      "checksumMD5": "80a264c84c96aa776bff330087c80ab3"
     },
     {
       "userFriendlyName": "SLIPSTREAM_3",

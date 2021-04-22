@@ -2,8 +2,8 @@
   "fileName": "Larry",
   "driverName": "LARRY",
   "driverCode": "LAR",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "OVERTAKE_2",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_LAR_SELECT_CHAR",
       "bfwavFileSize": "43216",
       "checksumMD5": "f600dd25e88d6619773486b3de4dd1d9"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_LAR.dspadpcm",
+      "dxName": "pVO_N_LAR.dspadpcm",
+      "bfwavFileSize": "40584",
+      "checksumMD5": "4ee3804d7121bf235aab7626c57cebf1"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "fileName": "Jugem",
   "driverName": "JUGEM",
   "driverCode": "LK",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "ITEM_THROW_FORWARD_1",
@@ -494,6 +494,13 @@
       "dxName": "pVO_M_LK_SELECT_CHAR",
       "bfwavFileSize": "35208",
       "checksumMD5": "e20f70d79b62dd16d4055f8b92a48dd8"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_LK.dspadpcm",
+      "dxName": "pVO_N_LK.dspadpcm",
+      "bfwavFileSize": "40912",
+      "checksumMD5": "3c482e82c1470864612873976e8836ed"
     },
     {
       "userFriendlyName": "FINISH_BAD_3",

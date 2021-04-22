@@ -2,8 +2,8 @@
   "fileName": "Roy",
   "driverName": "ROY",
   "driverCode": "ROY",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_3",
@@ -46,6 +46,13 @@
       "dxName": "pVO_M_ROY_SELECT_CHAR",
       "bfwavFileSize": "35208",
       "checksumMD5": "56b50767433660fe042a34c959081feb"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_ROY.dspadpcm",
+      "dxName": "pVO_N_ROY.dspadpcm",
+      "bfwavFileSize": "45072",
+      "checksumMD5": "7b33717429f8041dc460245071edcd5d"
     },
     {
       "userFriendlyName": "TRICK_SA_2",

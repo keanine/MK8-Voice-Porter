@@ -41,8 +41,6 @@ namespace MK8VoiceTool
             }
             GlobalDirectory.ClearTempFolders();
 
-            //move the friendly temp file to the output with the new name
-
             //NOTES
             //If there are conflicts (U uses the same sound for some actions) then warn the user
             // For targets that reuse the same sound for multiple actions, ask the user which sound they want to use
@@ -54,15 +52,60 @@ namespace MK8VoiceTool
             DriverIdentityData targetIdentity = FindTargetDriverIdentity(targetDriverFile, driverIdentities);
 
             Converter.ConvertFilesToBFWAV(GlobalDirectory.inputFolder, GlobalDirectory.bfwavTempFolder);
-            string[] tempFiles = RenametoFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.friendlyTempFolder, "bfwav", driverIdentities);
+            RenameToFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.friendlyTempFolder, "bfwav", driverIdentities);
 
-            AssignTargetName(tempFiles, GlobalDirectory.finalTempFolder, targetIdentity);
+            //if contains menu, pack that and delete
+            string menuFilepath = GlobalDirectory.friendlyTempFolder + "SELECT_DRIVER.bfwav";
+            if (File.Exists(menuFilepath))
+            {
+                AssignTargetNameToFile(menuFilepath, GlobalDirectory.finalTempFolder, targetIdentity);
+
+                string menuParam = GlobalDirectory.menuParamsDirectory + targetIdentity.fileName + "_param.bin";
+                File.Copy(menuParam, GlobalDirectory.finalTempFolder + "_param.bin");
+
+                if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
+                    Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_M_" + targetIdentity.fileName + ".bars", 0x020);
+                else
+                    System.Windows.MessageBox.Show($"There were no compatible menu files for {targetIdentity.fileName}");
+
+                foreach (string file in Directory.GetFiles(GlobalDirectory.finalTempFolder))
+                {
+                    File.Delete(file);
+                }
+            }
+
+            //if contains unlock, pack that and delete
+            string unlockFilepath = GlobalDirectory.friendlyTempFolder + "UNLOCK_DRIVER.bfwav";
+            if (File.Exists(unlockFilepath))
+            {
+                AssignTargetNameToFile(unlockFilepath, GlobalDirectory.finalTempFolder, targetIdentity);
+
+                string menuParam = GlobalDirectory.menuParamsDirectory + targetIdentity.fileName + "_param.bin";
+                File.Copy(menuParam, GlobalDirectory.finalTempFolder + "_param.bin");
+
+                if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
+                    Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_N_" + targetIdentity.fileName + ".bars", 0x020);
+                else
+                    System.Windows.MessageBox.Show($"There were no compatible unlock files for {targetIdentity.fileName}");
+
+                foreach (string file in Directory.GetFiles(GlobalDirectory.finalTempFolder))
+                {
+                    File.Delete(file);
+                }
+            }
+
+            //pack everything else
+
+            AssignTargetName(GlobalDirectory.friendlyTempFolder, GlobalDirectory.finalTempFolder, targetIdentity);
 
             string param = GlobalDirectory.driverParamsDirectory + targetIdentity.fileName + "_param.bin";
             File.Copy(param, GlobalDirectory.finalTempFolder + "_param.bin");
 
             //Add a condition for unlock and menu
-            Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars", 0x020);
+            if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
+                Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars", 0x020);
+            else
+                System.Windows.MessageBox.Show($"There were no compatible driver files for {targetIdentity.fileName}");
         }
 
         public static void PortToBFWAV(string targetDriverFile)
@@ -71,9 +114,9 @@ namespace MK8VoiceTool
             DriverIdentityData targetIdentity = FindTargetDriverIdentity(targetDriverFile, driverIdentities);
 
             Converter.ConvertFilesToBFWAV(GlobalDirectory.inputFolder, GlobalDirectory.bfwavTempFolder);
-            string[] tempFiles = RenametoFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.friendlyTempFolder, "bfwav", driverIdentities);
+            RenameToFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.friendlyTempFolder, "bfwav", driverIdentities);
 
-            AssignTargetName(tempFiles, GlobalDirectory.outputFolder, targetIdentity);
+            AssignTargetName(GlobalDirectory.friendlyTempFolder, GlobalDirectory.outputFolder, targetIdentity);
         }
 
         public static void PortToFriendlyBFWAV(string targetDriverFile)
@@ -81,7 +124,7 @@ namespace MK8VoiceTool
             DriverIdentityData[] driverIdentities = DeserializeDriverIdentityData();
 
             Converter.ConvertFilesToBFWAV(GlobalDirectory.inputFolder, GlobalDirectory.bfwavTempFolder);
-            RenametoFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.outputFolder, "bfwav", driverIdentities);
+            RenameToFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.outputFolder, "bfwav", driverIdentities);
         }
 
         public static void PortToFriendlyWAV(string targetDriverFile)
@@ -89,7 +132,7 @@ namespace MK8VoiceTool
             DriverIdentityData[] driverIdentities = DeserializeDriverIdentityData();
 
             FilesToWAV(GlobalDirectory.inputFolder, GlobalDirectory.wavTempFolder);
-            RenametoFriendlyAlias(GlobalDirectory.wavTempFolder, GlobalDirectory.outputFolder, "wav", driverIdentities);
+            RenameToFriendlyAlias(GlobalDirectory.wavTempFolder, GlobalDirectory.outputFolder, "wav", driverIdentities);
         }
 
         public static void FilesToWAV(string inputFolder, string outputFolder)
@@ -110,7 +153,7 @@ namespace MK8VoiceTool
             Converter.ConvertBFWAVtoWAV(GlobalDirectory.bfwavTempFolder, outputFolder);
         }
 
-        public static string[] RenametoFriendlyAlias(string inputFolder, string outputFolder, string extension, DriverIdentityData[] driverIdentities)
+        public static void RenameToFriendlyAlias(string inputFolder, string outputFolder, string extension, DriverIdentityData[] driverIdentities)
         {
             //Get all files in the input folder
             string[] inputFiles = Directory.GetFiles(inputFolder, $"*.{extension}");
@@ -119,8 +162,6 @@ namespace MK8VoiceTool
             var unusedAliases = AliasData.GetCopyOfVoiceFileAlias();
 
             //Copy the input file to the temp folder with the friendly name
-            List<string> tempFiles = new List<string>();
-
             foreach (DriverIdentityData driverIdentity in driverIdentities)
             {
                 for (int f = 0; f < inputFiles.Length; f++)
@@ -135,7 +176,6 @@ namespace MK8VoiceTool
                             if (!File.Exists(destination))
                             {
                                 File.Copy(inputFiles[f], destination);
-                                tempFiles.Add(destination);
                             }
                         }
                     }
@@ -146,8 +186,6 @@ namespace MK8VoiceTool
             {
                 File.Delete(inputFiles[f]);
             }
-
-            return tempFiles.ToArray();
         }
 
         public static DriverIdentityData[] DeserializeDriverIdentityData()
@@ -188,14 +226,23 @@ namespace MK8VoiceTool
             return FindTargetDriverIdentity(targetDriverFile, driverIdentities);
         }
 
-        public static void AssignTargetName(string[] inputFiles, string outputFolder, DriverIdentityData targetIdentity)
+        public static void AssignTargetName(string inputFolder, string outputFolder, DriverIdentityData targetIdentity)
         {
             if (targetIdentity != null)
             {
-                //Get the U name for the friendly temp file and add name/code
-                for (int f = 0; f < inputFiles.Length; f++)
+                foreach (var inputFile in Directory.GetFiles(inputFolder))
                 {
-                    string file = Path.GetFileNameWithoutExtension(inputFiles[f]);
+                    AssignTargetNameToFile(inputFile, outputFolder, targetIdentity);
+                }
+            }
+        }
+
+        public static void AssignTargetNameToFile(string inputFile, string outputFolder, DriverIdentityData targetIdentity)
+        {
+            //Get the U name for the friendly temp file and add name/code
+            if (targetIdentity != null)
+            {
+                    string file = Path.GetFileNameWithoutExtension(inputFile);
 
                     foreach (var element in targetIdentity.elements)
                     {
@@ -205,11 +252,10 @@ namespace MK8VoiceTool
                             //outputFiles.Add(value);
                             if (!File.Exists(destination))
                             {
-                                File.Move(inputFiles[f], destination);
+                                File.Move(inputFile, destination);
                             }
                         }
                     }
-                }
             }
         }
     }

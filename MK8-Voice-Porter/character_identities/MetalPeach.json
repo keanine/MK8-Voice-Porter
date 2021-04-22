@@ -2,8 +2,8 @@
   "fileName": "MetalPeach",
   "driverName": "METALPEACH",
   "driverCode": "MPC",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "ANTI-GRAVITY_SPIN_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MPC_SELECT_CHAR",
       "bfwavFileSize": "43984",
       "checksumMD5": "f275b368ee9580ea0157c1e169424c5b"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MPC.dspadpcm",
+      "dxName": "pVO_N_MPC.dspadpcm",
+      "bfwavFileSize": "64152",
+      "checksumMD5": "33b192adf0d3ec4ea8982ea758fb61d0"
     }
   ]
 }

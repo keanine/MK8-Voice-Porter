@@ -2,8 +2,8 @@
   "fileName": "Ludwig",
   "driverName": "LUDWIG",
   "driverCode": "LUD",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SA_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_LUD_SELECT_CHAR",
       "bfwavFileSize": "48472",
       "checksumMD5": "1cd31000d00a6ead25c09e41f1b6bf83"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_LUD.dspadpcm",
+      "dxName": "pVO_N_LUD.dspadpcm",
+      "bfwavFileSize": "57688",
+      "checksumMD5": "9ff97c2ec68b35b837aa23336a98abe2"
     }
   ]
 }

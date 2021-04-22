@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 //using Cafe;
 //using Library.CommonFormats;
 using BARSViewer; // For extracting Switch .bars
@@ -139,12 +140,109 @@ namespace MK8VoiceTool
             string[] barsFiles = Directory.GetFiles(inputFolder, "*.bars");
             if (barsFiles.Length > 1)
             {
-                throw new System.Exception("Multiple BARS files found in the input folder. Please only use one.");
+                int driverParamCount = 0;
+                int menuParamCount = 0;
+                int unlockParamCount = 0;
+
+                //for each BARS, cycle through stored _param files until a match is found. If another BARS has the same type (driver/menu/unlock) then fail.
+                foreach (string barsFile in barsFiles)
+                {
+                    Uwizard.SARC.extract(barsFile, GlobalDirectory.paramCheckTempFolder);
+
+                    string extractedParamFile = Directory.GetFiles(GlobalDirectory.paramCheckTempFolder, "*.bin")[0];
+                    byte[] extractedParam = File.ReadAllBytes(extractedParamFile);
+
+                    if (driverParamCount <= 1 && FindMatchingParams(extractedParamFile, GlobalDirectory.driverParamsDirectory, ref driverParamCount))
+                    {
+                        Utilities.ClearDirectory(GlobalDirectory.paramCheckTempFolder);
+                        if (driverParamCount > 1)
+                        {
+                            MessageBox.Show($"Please only use one driver BARS file at a time. Only {Path.GetFileName(barsFile)} will be used");
+                            continue;
+                        }
+
+                        Uwizard.SARC.extract(barsFile, outputFolder);
+                        continue;
+                    }
+                    if (menuParamCount <= 1 && FindMatchingParams(extractedParamFile, GlobalDirectory.menuParamsDirectory, ref menuParamCount))
+                    {
+                        Utilities.ClearDirectory(GlobalDirectory.paramCheckTempFolder);
+                        if (menuParamCount > 1)
+                        {
+                            MessageBox.Show("Please only use one menu BARS file at a time. Only {Path.GetFileName(barsFile)} will be used");
+                            continue;
+                        }
+
+                        Uwizard.SARC.extract(barsFile, outputFolder);
+                        continue;
+                    }
+                    if (unlockParamCount <= 1 && FindMatchingParams(extractedParamFile, GlobalDirectory.unlockParamsDirectory, ref unlockParamCount))
+                    {
+                        Utilities.ClearDirectory(GlobalDirectory.paramCheckTempFolder);
+                        if (unlockParamCount > 1)
+                        {
+                            MessageBox.Show("Please only use one unlock BARS file at a time. Only {Path.GetFileName(barsFile)} will be used");
+                            continue;
+                        }
+
+                        Uwizard.SARC.extract(barsFile, outputFolder);
+                        continue;
+                    }
+                }
+
+
+                //int sndgCount = 1;
+                //if (Directory.GetFiles(inputFolder, "SNDG_M_*.bars").Length > 1)
+                //{
+                //    sndgCount++;
+                //    throw new System.Exception("Please only use one of each type of BARS at a time");
+                //}
+                //if (Directory.GetFiles(inputFolder, "SNDG_B_*.bars").Length > 1)
+                //{
+                //    sndgCount++;
+                //    throw new System.Exception("Please only use one of each type of BARS at a time");
+                //}
+                //if (Directory.GetFiles(inputFolder, "SNDG_*.bars").Length > sndgCount)
+                //{
+                //    throw new System.Exception("Please only use one of each type of BARS at a time");
+                //}
             }
             else if (barsFiles.Length == 1)
             {
                 Uwizard.SARC.extract(barsFiles[0], outputFolder);
             }
+        }
+
+        static bool FindMatchingParams(string extractedParamFile, string paramsFolder, ref int count)
+        {
+            foreach (string paramFile in Directory.GetFiles(paramsFolder))
+            {
+                //byte[] param = File.ReadAllBytes(paramFile);
+                if (FileEquals(extractedParamFile, paramFile))
+                {
+                    count++;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static bool FileEquals(string path1, string path2)
+        {
+            byte[] file1 = File.ReadAllBytes(path1);
+            byte[] file2 = File.ReadAllBytes(path2);
+            if (file1.Length == file2.Length)
+            {
+                for (int i = 0; i < file1.Length; i++)
+                {
+                    if (file1[i] != file2[i])
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
         }
     }
 }

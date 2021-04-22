@@ -2,8 +2,8 @@
   "fileName": "Mii_M04",
   "driverName": "Mii_M04",
   "driverCode": "MM4",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SB_2",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MM4_SELECT_CHAR",
       "bfwavFileSize": "34440",
       "checksumMD5": "9f42961c2c402f9ebd1118b696280e7f"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MM4.dspadpcm",
+      "dxName": "pVO_N_MM4.dspadpcm",
+      "bfwavFileSize": "82056",
+      "checksumMD5": "f72b52f40cb241cd738c866ccfbfc53b"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "fileName": "MetalMario",
   "driverName": "METALMARIO",
   "driverCode": "MMR",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SB_2",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MMR_SELECT_CHAR",
       "bfwavFileSize": "37840",
       "checksumMD5": "48a0ec0d0add448cb02bd49d6fa4b513"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MMR.dspadpcm",
+      "dxName": "pVO_N_MMR.dspadpcm",
+      "bfwavFileSize": "54616",
+      "checksumMD5": "06a7df377fb9b458497dd2aece9d2832"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "fileName": "Rosetta",
   "driverName": "ROSETTA",
   "driverCode": "RS",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "SFX_HORN_OFF",
@@ -32,6 +32,13 @@
       "dxName": "pVO_M_RS_SELECT_CHAR",
       "bfwavFileSize": "47056",
       "checksumMD5": "04d60455855cbb0a8f826f6ab43b9480"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_RS.dspadpcm",
+      "dxName": "pVO_N_RS.dspadpcm",
+      "bfwavFileSize": "43536",
+      "checksumMD5": "ac5eb24a35910d646b8f2ce0259b51d8"
     },
     {
       "userFriendlyName": "START_GLIDE_2",

@@ -2,8 +2,8 @@
   "fileName": "Iggy",
   "driverName": "IGGY",
   "driverCode": "IGY",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "FINISH_BAD_3",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_IGY_SELECT_CHAR",
       "bfwavFileSize": "29832",
       "checksumMD5": "5b5898f774d1f6485ef05b9ba7933ccb"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_IGY.dspadpcm",
+      "dxName": "pVO_N_IGY.dspadpcm",
+      "bfwavFileSize": "29064",
+      "checksumMD5": "b1539d57ae773c73db9eba2c4a1909ec"
     }
   ]
 }

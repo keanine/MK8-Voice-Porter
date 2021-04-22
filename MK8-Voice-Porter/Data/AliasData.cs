@@ -101,7 +101,9 @@ namespace MK8VoiceTool
             ( "pVO_DRIVERCODE_STRM_END"         , "SLIPSTREAM_3"             ),
             ( "pVO_DRIVERCODE_STR_FAIL"         , "STALL_1"                  ),
             ( "pVO_DRIVERCODE_STR_FAIL_END"     , "STALL_2"                  ),
-            ( "pVO_M_DRIVERCODE_SELECT_CHAR"    , "SELECT_DRIVER"            )
+            ( "pVO_M_DRIVERCODE_SELECT_CHAR"    , "SELECT_DRIVER"            ),
+
+            ( "pVO_N_DRIVERCODE.dspadpcm"     , "UNLOCK_DRIVER"            )
         };
 
         public static string GetDevDriverAlias(string friendlyName)
@@ -140,7 +142,7 @@ namespace MK8VoiceTool
             }
             else
             {
-                key = devName.Replace($"_{driverCode}_", "_DRIVERCODE_");
+                key = devName.Replace($"_{driverCode}", "_DRIVERCODE");
             }
 
             foreach (var alias in voiceFileAlias)

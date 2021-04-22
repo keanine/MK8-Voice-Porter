@@ -2,8 +2,8 @@
   "fileName": "Mii_M02",
   "driverName": "Mii_M02",
   "driverCode": "MM2",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SB_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MM2_SELECT_CHAR",
       "bfwavFileSize": "24096",
       "checksumMD5": "13ccb4dd3a39ee5478e00a8f6a4767a7"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MM2.dspadpcm",
+      "dxName": "pVO_N_MM2.dspadpcm",
+      "bfwavFileSize": "73248",
+      "checksumMD5": "42af934a8c1e25a23936826f1b16524a"
     }
   ]
 }

@@ -40,5 +40,11 @@ namespace MK8VoiceTool
             return false;
 
         }
+
+        public static void ClearDirectory(string folder)
+        {
+            Directory.Delete(folder, true);
+            Directory.CreateDirectory(folder);
+        }
     }
 }

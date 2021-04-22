@@ -2,8 +2,8 @@
   "fileName": "Mii_F01",
   "driverName": "Mii_F01",
   "driverCode": "MF1",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SB_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MF1_SELECT_CHAR",
       "bfwavFileSize": "24864",
       "checksumMD5": "93c5b9a78a74f59476f4e34c7b4e30c3"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MF1.dspadpcm",
+      "dxName": "pVO_N_MF1.dspadpcm",
+      "bfwavFileSize": "69088",
+      "checksumMD5": "3bc6f4e5bd41f1ad3d5fa29e3b227bf3"
     }
   ]
 }

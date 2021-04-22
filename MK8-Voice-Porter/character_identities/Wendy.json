@@ -2,8 +2,8 @@
   "fileName": "Wendy",
   "driverName": "WENDY",
   "driverCode": "WEN",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "SFX_HORN_OFF",
@@ -32,6 +32,13 @@
       "dxName": "pVO_M_WEN_SELECT_CHAR",
       "bfwavFileSize": "38280",
       "checksumMD5": "1f84e88b9e0f40162a97e1a24fecc903"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_WEN.dspadpcm",
+      "dxName": "pVO_N_WEN.dspadpcm",
+      "bfwavFileSize": "36744",
+      "checksumMD5": "b61b6e7a6dd0a80c593dd5bdafdab823"
     },
     {
       "userFriendlyName": "TRICK_SA_3",

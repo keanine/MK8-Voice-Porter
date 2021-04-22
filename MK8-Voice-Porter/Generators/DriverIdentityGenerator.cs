@@ -17,16 +17,6 @@ namespace MK8VoiceTool
 
             string[] fileInfoFilepathsU = Directory.GetFiles(fileInfoDirectoryU);
 
-            //for (int i = 0; i < fileInfoFilepathsU.Length; i++)
-            //{
-            //    fileInfoListU[i] = JsonConvert.DeserializeObject<FileInfoData>(fileInfoFilepathsU[i]);
-            //}
-
-            //for (int i = 0; i < fileInfoFilepathsDX.Length; i++)
-            //{
-            //    fileInfoListDX[i] = JsonConvert.DeserializeObject<FileInfoData>(fileInfoFilepathsDX[i]);
-            //}
-
             for (int i = 0; i < fileInfoFilepathsU.Length; i++)
             {
                 string driverFile = Path.GetFileName(fileInfoFilepathsU[i]);
@@ -77,7 +67,16 @@ namespace MK8VoiceTool
                             identityData.AddElement(friendlyName, elementU.fileName, elementDX.fileName, elementU.bfwavFileSize, elementU.checksumMD5);
                         }
                     }
+
+                    //Add exception for unlocking, as these files cannot be found in the DX version
+                    if (elementU.fileName.StartsWith("pVO_N_"))
+                    {
+                        string friendlyName = AliasData.GetFriendlyVoiceAlias(elementU.fileName, identityData.driverName, identityData.driverCode);
+                        identityData.AddElement(friendlyName, elementU.fileName, elementU.fileName, elementU.bfwavFileSize, elementU.checksumMD5);
+                        identityData.voiceclipCount++;
+                    }
                 }
+
 
                 if (identityData.elementCount != identityData.voiceclipCount)
                 {

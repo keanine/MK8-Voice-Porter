@@ -2,8 +2,8 @@
   "fileName": "BbRosetta",
   "driverName": "BBROSETTA",
   "driverCode": "BRS",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "FINISH_BAD_3",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_BRS_SELECT_CHAR",
       "bfwavFileSize": "40144",
       "checksumMD5": "e79bae813abe399f3c7710765a2b7b43"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_BRS.dspadpcm",
+      "dxName": "pVO_N_BRS.dspadpcm",
+      "bfwavFileSize": "51984",
+      "checksumMD5": "0cf37da3516270e655692c1a53f7b3cb"
     }
   ]
 }

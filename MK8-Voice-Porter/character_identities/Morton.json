@@ -2,8 +2,8 @@
   "fileName": "Morton",
   "driverName": "MORTON",
   "driverCode": "MOR",
-  "voiceclipCount": 81,
-  "elementCount": 81,
+  "voiceclipCount": 82,
+  "elementCount": 82,
   "elements": [
     {
       "userFriendlyName": "TRICK_SA_1",
@@ -571,6 +571,13 @@
       "dxName": "pVO_M_MOR_SELECT_CHAR",
       "bfwavFileSize": "29832",
       "checksumMD5": "e60d8dc947ac08ca80f08db3f4396635"
+    },
+    {
+      "userFriendlyName": "UNLOCK_DRIVER",
+      "uName": "pVO_N_MOR.dspadpcm",
+      "dxName": "pVO_N_MOR.dspadpcm",
+      "bfwavFileSize": "41680",
+      "checksumMD5": "a51cea5b973aaa117d7310174f22037c"
     }
   ]
 }
