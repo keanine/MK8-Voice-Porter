@@ -1,5 +1,5 @@
 # MK8-Voice-Porter
-Currently only for Mario Kart 8 on WiiU. Port BARS/BFWAV/WAV files to work with other characters!
+Currently only for Mario Kart 8 on WiiU. Port BARS/BFWAV/~~WAV~~* files to work with other characters!
 
 When using BFWAV or WAV files as your input, make sure to name your input files using the User-Friendly filenames.
 MK8-Voice-Porter can also detect the filenames from any character on the WiiU version of the game 
@@ -9,10 +9,12 @@ the BARS conversion.
 You can also use this tool to change the names of your files to the User-Friendly version for easier editing.
 
 # How to Use
-Place your BARS file or BFWAV/WAV files into the Input folder.
+Place your BARS file or BFWAV/~~WAV~~* files into the Input folder.
 Choose the character you wish to port to.
 Press "Port to BARS file".
 The files can be found in the Output folder.
+
+\* Porting from WAV files has been removed until further notice.
 
 # List of User-Friendly Filenames
 ```
