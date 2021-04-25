@@ -59,14 +59,14 @@ namespace MK8VoiceTool.Windows
         {
             if (canPort)
             {
-                if ((VoiceFileFormat)cmb_TargetFormat.SelectedIndex == VoiceFileFormat.BARS)
-                {
-                    MessageBoxResult result = MessageBox.Show($"When exporting to BARS, menu and unlock files are currently unsupported. Continue?", "Info", MessageBoxButton.OKCancel);
-                    if (result == MessageBoxResult.Cancel)
-                    {
-                        return;
-                    }
-                }
+                //if ((VoiceFileFormat)cmb_TargetFormat.SelectedIndex == VoiceFileFormat.BARS)
+                //{
+                //    MessageBoxResult result = MessageBox.Show($"When exporting to BARS, menu and unlock files are currently unsupported. Continue?", "Info", MessageBoxButton.OKCancel);
+                //    if (result == MessageBoxResult.Cancel)
+                //    {
+                //        return;
+                //    }
+                //}
 
                 if (Directory.GetFiles(GlobalDirectory.outputFolder).Length > 0)
                 {

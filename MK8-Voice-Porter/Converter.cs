@@ -121,19 +121,37 @@ namespace MK8VoiceTool
             Utilities.RunConsoleCommand(exe, argument, "");
         }
 
-        public static void ConvertWAVtoBFWAV(string filepath, string outputFolder)
+        public static bool ConvertWAVtoBFWAV(string filepath, string outputFolder, bool outputMessage = true)
         {
-            string NW4F_WaveConverter = "tools/BFWAVtoWAV/NW4F_WaveConverter.exe";
-            Utilities.RunConsoleCommand(NW4F_WaveConverter, $"-o {outputFolder}/{Path.GetFileNameWithoutExtension(filepath)}.bfwav {filepath}", "");
+            string NW4F_WaveConverter = "tools/BFWAV to WAV/NW4F_WaveConverter.exe";
+            if (File.Exists(NW4F_WaveConverter))
+            {
+                Utilities.RunConsoleCommand(NW4F_WaveConverter, $"-o {outputFolder}/{Path.GetFileNameWithoutExtension(filepath)}.bfwav {filepath}", "");
+                return true;
+            }
+            else if (outputMessage)
+            {
+                MessageBox.Show("Converting from WAV to BFWAV has been disabled while I find a new solution for it.");
+            }
+            return false;
         }
 
         public static void ConvertFilesToBFWAV(string inputFolder, string outputFolder)
         {
+            bool successful = false;
             //Convert WAV to BFWAV
             string[] wavFiles = Directory.GetFiles(inputFolder, "*.wav");
             foreach (var wav in wavFiles)
             {
-                ConvertWAVtoBFWAV(wav, outputFolder);
+                if (ConvertWAVtoBFWAV(wav, outputFolder, false))
+                {
+                    successful = true;
+                }
+            }
+
+            if (!successful)
+            {
+                MessageBox.Show("Converting from WAV to BFWAV has been disabled while I find a new solution for it.");
             }
 
             //Extract BARS
