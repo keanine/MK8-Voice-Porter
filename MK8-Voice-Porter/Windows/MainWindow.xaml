@@ -10,7 +10,7 @@
         <Button Name="btn_Port" IsEnabled="True" Content="Port" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_Port_Click"/>
         <Button Name="btn_DataGeneration" IsEnabled="False" Content="Dev" Margin="259,10,73,0" Click="btn_DataGeneration_Click" Height="20" VerticalAlignment="Top"/>
         <TextBlock x:Name="lbl_Message" Margin="10,60,10,0" TextWrapping="Wrap" Height="33" VerticalAlignment="Top">
-            Future versions will be more user friendly.
+            
         </TextBlock>
         <ComboBox x:Name="cmb_TargetDriver" HorizontalAlignment="Right" Margin="0,0,10,35" Width="159" Height="22" VerticalAlignment="Bottom" SelectionChanged="cmb_TargetDriver_SelectionChanged"/>
         <Label Content="Output Format:" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="105,0,0,62" Height="26" VerticalAlignment="Bottom" Width="96"/>
