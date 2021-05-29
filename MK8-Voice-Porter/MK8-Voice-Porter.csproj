@@ -121,6 +121,7 @@
     <Compile Include="Data\FileInfoData.cs" />
     <Compile Include="Generators\DriverIdentityGenerator.cs" />
     <Compile Include="Converter.cs" />
+    <Compile Include="WAVtoBFWAV.cs" />
     <Compile Include="Windows\DataGenerationWindow.xaml.cs">
       <DependentUpon>DataGenerationWindow.xaml</DependentUpon>
     </Compile>

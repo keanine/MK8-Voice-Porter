@@ -41,6 +41,7 @@ namespace MK8VoiceTool
             }
             GlobalDirectory.ClearTempFolders();
 
+            System.Windows.MessageBox.Show($"Complete");
             //NOTES
             //If there are conflicts (U uses the same sound for some actions) then warn the user
             // For targets that reuse the same sound for multiple actions, ask the user which sound they want to use

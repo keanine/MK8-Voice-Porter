@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MK8VoiceTool.Windows"
         mc:Ignorable="d"
-        Title="MK8 Voice Tools for WiiU" Height="262.842" Width="386.679" ResizeMode="NoResize" Icon="/MK8VoiceTool;component/icon.ico">
+        Title="MK8 Voice Tools for WiiU | Beta v0.9.4" Height="262.842" Width="386.679" ResizeMode="NoResize" Icon="/MK8VoiceTool;component/icon.ico">
     <Grid>
         <Button Name="btn_Port" IsEnabled="True" Content="Port" Margin="10,0,10,10" Height="20" VerticalAlignment="Bottom" Click="btn_Port_Click"/>
         <Button Name="btn_DataGeneration" IsEnabled="False" Content="Dev" Margin="259,10,73,0" Click="btn_DataGeneration_Click" Height="20" VerticalAlignment="Top"/>
@@ -20,5 +20,6 @@
         <Button x:Name="btn_InputFolder" Content="Input Folder" Margin="10,10,0,0" Height="20" VerticalAlignment="Top" Click="btn_InputFolder_Click" HorizontalAlignment="Left" Width="120"/>
         <Button x:Name="btn_OutputFolder" Content="Output Folder" Margin="135,10,0,0" Height="20" VerticalAlignment="Top" Click="btn_OutputFolder_Click" HorizontalAlignment="Left" Width="119"/>
         <Button x:Name="btn_ExtractParams" IsEnabled="True" Content="Extract Params..." Margin="10,35,10,0" Height="20" VerticalAlignment="Top" Click="btn_ExtractParams_Click"/>
+        <!--<Button x:Name="btn_WAVtoBFWAV" Content="WAV to BFWAV" Margin="0,114,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="112" Click="btn_WAVtoBFWAV_Click" />-->
     </Grid>
 </Window>

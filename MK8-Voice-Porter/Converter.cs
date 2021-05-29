@@ -141,17 +141,20 @@ namespace MK8VoiceTool
             bool successful = false;
             //Convert WAV to BFWAV
             string[] wavFiles = Directory.GetFiles(inputFolder, "*.wav");
-            foreach (var wav in wavFiles)
+            if (wavFiles.Length > 0)
             {
-                if (ConvertWAVtoBFWAV(wav, outputFolder, false))
+                foreach (var wav in wavFiles)
                 {
-                    successful = true;
+                    if (ConvertWAVtoBFWAV(wav, outputFolder, false))
+                    {
+                        successful = true;
+                    }
                 }
-            }
 
-            if (!successful)
-            {
-                MessageBox.Show("Converting from WAV to BFWAV has been disabled while I find a new solution for it.");
+                if (!successful)
+                {
+                    MessageBox.Show("Converting from WAV to BFWAV has been disabled while I find a new solution for it.");
+                }
             }
 
             //Extract BARS
@@ -208,7 +211,6 @@ namespace MK8VoiceTool
                     }
                 }
 
-
                 //int sndgCount = 1;
                 //if (Directory.GetFiles(inputFolder, "SNDG_M_*.bars").Length > 1)
                 //{
@@ -228,6 +230,12 @@ namespace MK8VoiceTool
             else if (barsFiles.Length == 1)
             {
                 Uwizard.SARC.extract(barsFiles[0], outputFolder);
+            }
+
+            string[] bfwavFiles = Directory.GetFiles(inputFolder, "*.bfwav");
+            foreach (string bfwavFile in bfwavFiles)
+            {
+                File.Copy(bfwavFile, outputFolder + Path.GetFileName(bfwavFile));
             }
         }
 

@@ -162,5 +162,15 @@ namespace MK8VoiceTool.Windows
             //Return
             CheckIfCanPort();
         }
+
+        private void btn_WAVtoBFWAV_Click(object sender, RoutedEventArgs e)
+        {
+            Converter.ConvertBFWAVtoWAV("files/testing/bfwav/", "files/testing/wav/");
+
+            byte[] fileAudioData;
+            string fileAudioIdntr;
+            BARSViewer.BMETA.STRG fileStrg;
+            WAVtoBFWAV.ConvertWAVtoBFWAV("files/testing/wav/test.wav", "files/testing/output/test.bfwav");
+        }
     }
 }
