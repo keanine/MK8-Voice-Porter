@@ -55,6 +55,8 @@ namespace MK8VoiceTool
             Converter.ConvertFilesToBFWAV(GlobalDirectory.inputFolder, GlobalDirectory.bfwavTempFolder);
             RenameToFriendlyAlias(GlobalDirectory.bfwavTempFolder, GlobalDirectory.friendlyTempFolder, "bfwav", driverIdentities);
 
+            bool menuFileCreated = false;
+
             //if contains menu, pack that and delete
             string menuFilepath = GlobalDirectory.friendlyTempFolder + "SELECT_DRIVER.bfwav";
             if (File.Exists(menuFilepath))
@@ -64,16 +66,29 @@ namespace MK8VoiceTool
                 string menuParam = GlobalDirectory.menuParamsDirectory + targetIdentity.fileName + "_param.bin";
                 File.Copy(menuParam, GlobalDirectory.finalTempFolder + "_param.bin");
 
+                string menuFileName = targetIdentity.fileName;
+
+                if (targetIdentity.fileName == "AnimalBoyA")
+                {
+                    menuFileName = menuFileName.Replace("Boy", "Girl");
+                    System.Windows.MessageBox.Show($"For some reason both Villagers use the same menu sound file. For this reason, your file has been output as the Female Villager file.");
+                }
+
                 if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
-                    Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_M_" + targetIdentity.fileName + ".bars", 0x020);
+                {
+                    Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_M_" + menuFileName + ".bars", 0x020);
+                    menuFileCreated = true;
+                }
                 else
-                    System.Windows.MessageBox.Show($"There were no compatible menu files for {targetIdentity.fileName}");
+                    System.Windows.MessageBox.Show($"There were no compatible menu files for {targetIdentity.fileName} found in the input folder");
 
                 foreach (string file in Directory.GetFiles(GlobalDirectory.finalTempFolder))
                 {
                     File.Delete(file);
                 }
             }
+
+            bool unlockFileCreated = false;
 
             //if contains unlock, pack that and delete
             string unlockFilepath = GlobalDirectory.friendlyTempFolder + "UNLOCK_DRIVER.bfwav";
@@ -85,9 +100,12 @@ namespace MK8VoiceTool
                 File.Copy(menuParam, GlobalDirectory.finalTempFolder + "_param.bin");
 
                 if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
+                {
                     Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_N_" + targetIdentity.fileName + ".bars", 0x020);
+                    unlockFileCreated = true;
+                }
                 else
-                    System.Windows.MessageBox.Show($"There were no compatible unlock files for {targetIdentity.fileName}");
+                    System.Windows.MessageBox.Show($"There were no compatible unlock files for {targetIdentity.fileName} found in the input folder");
 
                 foreach (string file in Directory.GetFiles(GlobalDirectory.finalTempFolder))
                 {
@@ -105,8 +123,8 @@ namespace MK8VoiceTool
             //Add a condition for unlock and menu
             if (Directory.GetFiles(GlobalDirectory.finalTempFolder).Length > 1)
                 Uwizard.SARC.pack(GlobalDirectory.finalTempFolder, GlobalDirectory.outputFolder + "SNDG_" + targetIdentity.fileName + ".bars", 0x020);
-            else
-                System.Windows.MessageBox.Show($"There were no compatible driver files for {targetIdentity.fileName}");
+            else if (!menuFileCreated && !unlockFileCreated)
+                System.Windows.MessageBox.Show($"There were no compatible driver files for {targetIdentity.fileName} found in the input folder");
         }
 
         public static void PortToBFWAV(string targetDriverFile)
