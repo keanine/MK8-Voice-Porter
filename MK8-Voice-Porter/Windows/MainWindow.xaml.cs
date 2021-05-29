@@ -22,6 +22,9 @@ namespace MK8VoiceTool.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string title = "MK8 Voice Tools for WiiU";
+        public static string version = "Beta v0.9.5";
+
         public static string targetDriver;
         public static string targetFormat;
 
@@ -31,6 +34,8 @@ namespace MK8VoiceTool.Windows
         {
             InitializeComponent();
             GlobalDirectory.RegenerateAllDirectories();
+
+            Title = $"{title} | {version}";
 
             string[] filepaths = Directory.GetFiles(GlobalDirectory.identitiesDirectory);
             foreach (string filepath in filepaths)

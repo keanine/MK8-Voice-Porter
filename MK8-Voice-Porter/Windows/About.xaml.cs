@@ -23,6 +23,21 @@ namespace MK8VoiceTool.Windows
         public About()
         {
             InitializeComponent();
+
+            txtblock_information.Inlines.Clear();
+
+            Hyperlink link = new Hyperlink();
+            link.Inlines.Add("MK8 Voice Porter");
+            link.NavigateUri = new Uri("https://github.com/keanine/MK8-Voice-Porter");
+            link.RequestNavigate += Hyperlink_RequestNavigate;
+
+            Bold bold = new Bold();
+            bold.Inlines.Add(MainWindow.version);
+
+            txtblock_information.Inlines.Add(link);
+            txtblock_information.Inlines.Add(" by Keanen Collins (Keanine)");
+            txtblock_information.Inlines.Add(new LineBreak());
+            txtblock_information.Inlines.Add(bold);
         }
 
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
