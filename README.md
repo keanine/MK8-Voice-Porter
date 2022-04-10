@@ -16,8 +16,17 @@ You can also use this tool to change the names of your files to the User-Friendl
 - In the second textbox, search for your content folder in your MK8 update dump. For example, mine is "F:\AMKP\MARIO KART 8 UPDATE v64\content\". This can be skipped if you're not going to be porting to or from DLC characters.
 - Click "Extract Params". The program will freeze for a moment. When it's unfrozen, close the Extract Params window.
 
-### Porting files with MK8 Voice Porter
-- Click "Input Folder", then put your .bars file or correctly named .bfwav/~~wav~~* files in the folder. A list of User-Friendly names can be found below, however any vanilla file name can also be used if that is your preference.
+### Porting one character's voice to another
+- Click "Input Folder", empty it if there's anything inside it, then put the .bars file of the characters voice you want to use inside the folder.
+- In the "Output Format" dropdown select format you want, generally this will be .bars.
+- In the "Output Driver" dropdown select the driver you would like to port over.
+- Click Port.
+- Click OK.
+- Click "Output Folder" to see the completed file. You can patch this in with whatever method you normally use to mod MK8 on console and on emulator.
+
+### Creating a bars file from sound files.
+- Create or find your .bfwav files. If you don't know how to make these I can't help you.
+- Click "Input Folder", empty it if there's anything inside it, then put your correctly named .bfwav/~~wav~~* files in the folder. A list of User-Friendly names can be found below, however any vanilla file name can also be used if that is your preference.
 - In the "Output Format" dropdown select format you want, generally this will be .bars.
 - In the "Output Driver" dropdown select the driver you would like to port over.
 - Click Port.
