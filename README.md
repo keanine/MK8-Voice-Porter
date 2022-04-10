@@ -17,12 +17,12 @@ You can also use this tool to change the names of your files to the User-Friendl
 - Click "Extract Params". The program will freeze for a moment. When it's unfrozen, close the Extract Params window.
 
 ### Porting one character's voice to another (BARS to BARS)
-- Click "Input Folder", empty it if there's anything inside it, then put the .bars file of the characters voice you want to use inside the folder.
+- Click "Input Folder", empty it if there's anything inside it, then put the .bars file of the characters voice you want to use inside the folder. I will use "SNDG_Daisy.bars" as the character I want to port from.
 - In the "Output Format" dropdown select format you want, generally this will be .bars.
-- In the "Output Driver" dropdown select the driver you would like to port over.
+- In the "Output Driver" dropdown select the driver you would like to port over, I will select Mario.
 - Click Port.
 - Click OK.
-- Click "Output Folder" to see the completed file. You can patch this in with whatever method you normally use to mod MK8 on console and on emulator.
+- Click "Output Folder" to see the completed file, in my case I see "SNDG_Mario.bars". You can patch this in with whatever method you normally use to mod MK8 on console and on emulator.
 
 ### Creating a bars file from sound files. (BFWAV to BARS)
 - Create or find your .bfwav files. If you don't know how to make these I can't help you. To name these files a list of User-Friendly names can be found below, however any vanilla file name can also be used if that is your preference.
