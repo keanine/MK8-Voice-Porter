@@ -8,20 +8,21 @@ the BARS conversion.
 
 You can also use this tool to change the names of your files to the User-Friendly version for easier editing.
 
-# First Time Setup
-Download the latest version of MK8 Voice Porter
-Click "Extract Params..."
-In the first textbox, search for your content folder in your MK8 dump. For example, mine is "F:\AMKP\MARIO KART 8\content\"
-In the second textbox, search for your content folder in your MK8 update dump. For example, mine is "F:\AMKP\MARIO KART 8 UPDATE v64\content\". This can be skipped if you're not going to be porting to or from DLC characters.
-Click "Extract Params". The program will freeze for a moment. When it's unfrozen, close the Extract Params window.
+# How to Use
+### First Time Setup
+- Download the latest version of MK8 Voice Porter
+- Click "Extract Params..."
+- In the first textbox, search for your content folder in your MK8 dump. For example, mine is "F:\AMKP\MARIO KART 8\content\"
+- In the second textbox, search for your content folder in your MK8 update dump. For example, mine is "F:\AMKP\MARIO KART 8 UPDATE v64\content\". This can be skipped if you're not going to be porting to or from DLC characters.
+- Click "Extract Params". The program will freeze for a moment. When it's unfrozen, close the Extract Params window.
 
-# Using MK8 Voice Porter
-Click "Input Folder", then put your .bars file or correctly named .bfwav/~~wav~~* files in the folder. A list of User-Friendly names can be found below, however any vanilla file name can also be used if that is your preference.
-In the "Output Format" dropdown select format you want, generally this will be .bars.
-In the "Output Driver" dropdown select the driver you would like to port over.
-Click Port.
-Click OK.
-Click "Output Folder" to see the completed file. You can patch this in with whatever method you normally use to mod MK8 on console and on emulator.
+### Porting files with MK8 Voice Porter
+- Click "Input Folder", then put your .bars file or correctly named .bfwav/~~wav~~* files in the folder. A list of User-Friendly names can be found below, however any vanilla file name can also be used if that is your preference.
+- In the "Output Format" dropdown select format you want, generally this will be .bars.
+- In the "Output Driver" dropdown select the driver you would like to port over.
+- Click Port.
+- Click OK.
+- Click "Output Folder" to see the completed file. You can patch this in with whatever method you normally use to mod MK8 on console and on emulator.
 
 \* Porting from WAV files has been removed until further notice.
 
